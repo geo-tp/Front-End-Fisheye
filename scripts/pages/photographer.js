@@ -83,9 +83,6 @@ async function init() {
   for (let media of photographerMedia) {
     displayMedia(media);
   }
-
-  console.log(photographer);
-  console.log(media);
 }
 
 init();

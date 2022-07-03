@@ -22,18 +22,30 @@
       <div class="photographer-header"></div>
       <div class="photographer-media"></div>
     </main>
-    <div id="contact_modal">
-      <div class="modal">
-        <header>
+    <div id="contact_modal" class="contact-modal">
+      <div class="contact-modal__container">
+        <header class="contact-modal__container__header">
           <h2>Contactez-moi</h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
-        <form>
-          <div>
+        <form class="contact-form">
+          <div class="contact-form__row">
             <label>Prénom</label>
             <input />
           </div>
-          <button class="contact_button">Envoyer</button>
+          <div class="contact-form__row">
+            <label>Nom</label>
+            <input />
+          </div>
+          <div class="contact-form__row">
+            <label>Email</label>
+            <input />
+          </div>
+          <div class="contact-form__row">
+            <label>Votre message</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <button class="button-default contact-form__submit">Envoyer</button>
         </form>
       </div>
     </div>
