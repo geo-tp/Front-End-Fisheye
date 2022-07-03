@@ -1,24 +1,3 @@
-async function getPhotographers() {
-  var photographers = await fetch(
-    "http://localhost:8000/Front-End-Fisheye/data/photographers.json"
-  )
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-
-      throw response;
-    })
-    .then((response) => {
-      return response.photographers;
-    })
-    .catch((err) => {
-      throw new Error("La requete a échoué");
-    });
-
-  return photographers;
-}
-
 async function displayData(photographers) {
   const photographersSection = document.querySelector(".photographers");
 

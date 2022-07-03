@@ -115,9 +115,9 @@ a {
   align-items: center;
   border: none;
   border-radius: 3px;
-  width: 150px;
-  height: 70px;
-  font-size: 18px;
+  width: 200px;
+  height: 80px;
+  font-size: 24px;
   font-weight: bold;
   outline: none;
   transition: color 0.1s ease;
@@ -168,6 +168,10 @@ a {
   border-radius: 3px;
   border: none;
 }
+.contact-form__submit {
+  font-size: 18px;
+}
+
 .photographer-header {
   background-color: #fafafa;
   height: 300px;
@@ -205,6 +209,7 @@ a {
   height: 100vh;
   width: 100%;
   background-color: #c4c4c485;
+  display: none;
 }
 .contact-modal__container {
   padding: 30px;
