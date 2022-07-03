@@ -13,12 +13,10 @@ async function getPhotographers() {
       return response.photographers;
     })
     .catch((err) => {
-      throw new Error("La requete api a echouée");
+      throw new Error("La requete a échoué");
     });
 
-  return {
-    photographers,
-  };
+  return photographers;
 }
 
 async function displayData(photographers) {
@@ -33,7 +31,7 @@ async function displayData(photographers) {
 
 async function init() {
   // Récupère les datas des photographes
-  const { photographers } = await getPhotographers();
+  const photographers = await getPhotographers();
   displayData(photographers);
 }
 
