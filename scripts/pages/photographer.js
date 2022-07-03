@@ -1,8 +1,4 @@
 // DOM ELEMENT
-const photographerInfos = document.querySelector("photographer-header__infos");
-const photographerPicture = document.querySelector(
-  "photographer-header__picture"
-);
 // const photographerMedia = document.querySelector("");
 
 async function getPhotographerById(id) {
@@ -19,7 +15,6 @@ async function getPhotographerById(id) {
     .then((data) => {
       console.log(data);
       for (let photographer of data.photographers) {
-        console.log(photographer.id, id);
         if (photographer.id == id) {
           return photographer;
         }
@@ -48,7 +43,7 @@ async function getMediaByPhotographerId(id) {
     .then((response) => {
       let photographerMedia = [];
       for (let media of response.media) {
-        if (media.photographerId === id) {
+        if (media.photographerId == id) {
           photographerMedia.push(media);
         }
       }
@@ -62,11 +57,20 @@ async function getMediaByPhotographerId(id) {
   return media;
 }
 
+async function displayPhotographerHeader(photographer) {
+  const photographerHeader = document.querySelector(".photographer-header");
+  const photographerHeaderModel = photographerHeaderFactory(photographer);
+  const userHeaderDom = photographerHeaderModel.getUserHeaderDOM();
+  photographerHeader.innerHTML = userHeaderDom;
+}
+
 async function init() {
   let params = new URL(document.location).searchParams;
   let id = params.get("id");
   const photographer = await getPhotographerById(id);
   const media = await getMediaByPhotographerId(id);
+
+  displayPhotographerHeader(photographer);
 
   console.log(photographer);
   console.log(media);
