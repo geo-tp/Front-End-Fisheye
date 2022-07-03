@@ -1,0 +1,17 @@
+.selection-default {
+  color: white;
+  background-color: $primary;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  :hover {
+    background-color: $secondary;
+    color: black;
+  }
+}
