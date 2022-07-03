@@ -26,7 +26,14 @@ a {
   margin-left: 100px;
 }
 
-.photographer {
+.photographer-picture {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.photographer-card1 {
   justify-self: center;
   display: flex;
   flex-basis: 30%;
@@ -35,25 +42,56 @@ a {
   flex-direction: column;
   text-align: center;
 }
-.photographer__name {
+.photographer-card1__name {
   color: #d3573c;
   font-weight: 400;
   font-size: 36px;
   text-decoration: none;
   margin-bottom: 0;
 }
-.photographer__picture {
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-  object-fit: cover;
-}
-.photographer__infos__location {
+.photographer-card1__infos__location {
   color: #d3573c;
   font-weight: 400;
 }
-.photographer__infos__pricing {
+.photographer-card1__infos__pricing {
   color: #c4c4c4;
+}
+
+.button-default {
+  background-color: #901c1c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 3px;
+  width: 100px;
+  height: 40px;
+  outline: none;
+  transition: color 0.1s ease;
+  cursor: pointer;
+}
+.button-default:hover {
+  background-color: #d3573c;
+  color: black;
+}
+
+.photographer-header {
+  background-color: #fafafa;
+  height: 300px;
+  margin: 0 100px;
+}
+.photographer-header__contact {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 11px;
+  width: 170px;
+  height: 70px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .photographers {
   display: grid;
