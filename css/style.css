@@ -89,12 +89,20 @@ a {
   height: 330px;
   object-fit: cover;
   object-position: top;
-  border-radius: 5px;
+  border-radius: 12px;
   cursor: pointer;
 }
 .media-card__infos {
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
+}
+.media-card__infos button {
+  font-size: 20px;
+}
+.media-card__infos a {
+  padding-left: 7px;
 }
 
 .button-default {
@@ -116,6 +124,16 @@ a {
 .button-default:hover {
   background-color: #d3573c;
   color: black;
+}
+
+.button-like {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  background-color: transparent;
+  color: #901c1c;
+  border: none;
 }
 
 .selection-default {

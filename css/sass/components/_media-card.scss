@@ -7,12 +7,22 @@
     height: 330px;
     object-fit: cover;
     object-position: top;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
   }
 
   &__infos {
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+
+    & button {
+      font-size: 20px;
+    }
+
+    & a {
+      padding-left: 7px;
+    }
   }
 }
