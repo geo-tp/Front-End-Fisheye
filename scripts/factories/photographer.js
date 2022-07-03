@@ -6,9 +6,7 @@ function photographerFactory(data) {
   function getUserCardDOM() {
     const content = `      
           <a href="photographer.html?id=${id}" aria-label="${name}">
-            <div class="photographer__picture">
-              <img src="${picture}" alt="${name}" />
-            </div>        
+            <img class="photographer__picture" src="${picture}" alt="${name}" />
             <h2 class="photographer__title">${name}</h2>        
           </a>
             <div class="photographer__infos" tabindex="0">
