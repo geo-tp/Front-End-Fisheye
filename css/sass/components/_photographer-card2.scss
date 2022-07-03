@@ -1,0 +1,30 @@
+.photographer-card2 {
+  display: flex;
+  flex-basis: 30%;
+  flex-direction: column;
+  text-align: left;
+
+  &__infos {
+    &__name {
+      color: $secondary;
+      font-weight: 400;
+      font-size: 50px;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+    &__location {
+      font-size: 24px;
+      margin-bottom: 15px;
+
+      color: $secondary;
+      font-weight: 400;
+    }
+
+    &__description {
+    }
+
+    &__pricing {
+      color: $alt3;
+    }
+  }
+}

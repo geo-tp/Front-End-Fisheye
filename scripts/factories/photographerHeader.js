@@ -6,10 +6,10 @@ function photographerHeaderFactory(data) {
     const picture = `assets/photographers/${portrait}`;
 
     const content = `
-          <div class="photographer-header__infos">
-            <h2 class="photographer-header__infos__name">${name}</h2>  
-            <div class="photographer-header__infos__location">${city}, ${country}</div>
-            <div class="photographer-header__infos__description">${tagline}</div>      
+          <div class="photographer-card2">
+            <h2 class="photographer-card2__infos__name">${name}</h2>  
+            <div class="photographer-card2__infos__location">${city}, ${country}</div>
+            <div class="photographer-card2__infos__description">${tagline}</div>      
           </div>
   
           <button class="button-default" onclick="displayModal()">

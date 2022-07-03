@@ -57,6 +57,29 @@ a {
   color: #c4c4c4;
 }
 
+.photographer-card2 {
+  display: flex;
+  flex-basis: 30%;
+  flex-direction: column;
+  text-align: left;
+}
+.photographer-card2__infos__name {
+  color: #d3573c;
+  font-weight: 400;
+  font-size: 50px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.photographer-card2__infos__location {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #d3573c;
+  font-weight: 400;
+}
+.photographer-card2__infos__pricing {
+  color: #c4c4c4;
+}
+
 .picture-card {
   height: 25rem;
   padding: 2rem;
@@ -80,8 +103,10 @@ a {
   align-items: center;
   border: none;
   border-radius: 3px;
-  width: 100px;
-  height: 40px;
+  width: 150px;
+  height: 70px;
+  font-size: 18px;
+  font-weight: bold;
   outline: none;
   transition: color 0.1s ease;
   cursor: pointer;
@@ -113,19 +138,19 @@ a {
   background-color: #fafafa;
   height: 300px;
   margin: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-.photographer-header__contact {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  padding: 11px;
-  width: 170px;
-  height: 70px;
-  border: none;
-  background-color: #901c1c;
-  border-radius: 5px;
-  cursor: pointer;
+.photographer-header div {
+  flex-basis: 33%;
 }
+.photographer-header__picture {
+  text-align: right;
+}
+
 .photographers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
