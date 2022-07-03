@@ -83,6 +83,7 @@ a {
 .media-card {
   flex-basis: 28%;
   color: #901c1c;
+  padding-bottom: 20px;
 }
 .media-card img {
   width: 100%;
@@ -175,6 +176,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin: 0 100px;
+  flex-wrap: wrap;
 }
 
 .photographers {
