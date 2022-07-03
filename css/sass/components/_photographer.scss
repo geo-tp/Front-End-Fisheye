@@ -1,0 +1,31 @@
+.photographer {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__name {
+    color: #d3573c;
+    font-size: 36px;
+  }
+
+  &__picture {
+    height: 200px;
+    width: 200px;
+  }
+
+  &__infos {
+    &__location {
+    }
+
+    &__description {
+    }
+
+    &__pricing {
+    }
+
+    &__tags {
+    }
+  }
+}
