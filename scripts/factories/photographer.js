@@ -7,10 +7,10 @@ function photographerFactory(data) {
     const content = `      
           <a href="photographer.html?id=${id}" aria-label="${name}">
             <img class="photographer__picture" src="${picture}" alt="${name}" />
-            <h2 class="photographer__title">${name}</h2>        
+            <h2 class="photographer__name">${name}</h2>        
           </a>
             <div class="photographer__infos" tabindex="0">
-              <div class="photographer__infos__localisation">${city}, ${country}</div>
+              <div class="photographer__infos__location">${city}, ${country}</div>
               <div class="photographer__infos__description">${tagline}</div>
               <div class="photographer__infos__pricing">${price}€/jour</div>
             </div>
