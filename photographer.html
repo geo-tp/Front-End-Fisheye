@@ -26,7 +26,13 @@
       <div class="contact-modal__container">
         <header class="contact-modal__container__header">
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <button
+            class="button-close"
+            onclick="closeModal()"
+            aria-label="fermer la fenêtre de contact"
+          >
+            <i class="fas fa-close"></i>
+          </button>
         </header>
         <form class="contact-form">
           <div class="contact-form__row">
@@ -49,7 +55,32 @@
         </form>
       </div>
     </div>
+    <div class="lightbox-modal">
+      <div class="lightbox">
+        <button
+          class="button-close lightbox__close"
+          src="assets/icons/close.svg"
+          onclick="closeLightbox()"
+          aria-label="fermer l'image"
+        >
+          <i class="fas fa-close"></i>
+        </button>
+
+        <a class="lightbox__arrow-left" href="" aria-label="média précédent"
+          ><i class="fas fa-angle-left"></i
+        ></a>
+
+        <div class="lightbox__media">
+          <img src="assets/photographers/MimiKeel.jpg" alt="" />
+          <p class="lightbox__media__name">Arc en ciel</p>
+        </div>
+        <a class="lightbox__arrow-right" href="" aria-label="média suivant"
+          ><i class="fa fa-angle-right"></i
+        ></a>
+      </div>
+    </div>
     <script src="./scripts/utils/contactModal.js"></script>
+    <script src="./scripts/utils/lightboxModal.js"></script>
     <script src="./scripts/factories/photographerHeader.js"></script>
     <script src="./scripts/factories/media.js"></script>
     <script src="./scripts/api/photographers.js"></script>

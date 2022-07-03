@@ -1,2 +1,10 @@
 .button-close {
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+
+  & i {
+    font-size: 50px;
+  }
 }
