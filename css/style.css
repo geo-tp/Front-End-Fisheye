@@ -80,19 +80,21 @@ a {
   color: #c4c4c4;
 }
 
-.picture-card {
-  height: 25rem;
-  padding: 2rem;
-  flex-basis: 33%;
+.media-card {
+  flex-basis: 28%;
   color: #901c1c;
 }
-.picture-card img {
+.media-card img {
   width: 100%;
-  height: 200px;
+  height: 330px;
   object-fit: cover;
   object-position: top;
   border-radius: 5px;
   cursor: pointer;
+}
+.media-card__infos {
+  display: flex;
+  justify-content: space-between;
 }
 
 .button-default {
@@ -149,6 +151,12 @@ a {
 }
 .photographer-header__picture {
   text-align: right;
+}
+
+.photographer-media {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
 }
 
 .photographers {
