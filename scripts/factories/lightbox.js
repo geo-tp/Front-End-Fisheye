@@ -1,5 +1,5 @@
 function lightboxFactory(data) {
-  const { title, mediaContent, isImage } = data;
+  const { id, title, mediaContent, isImage } = data;
 
   function getLightboxDOM() {
     const lightbox = `      
@@ -20,11 +20,11 @@ function lightboxFactory(data) {
         <div class="lightbox__media">
         ${
           isImage
-            ? `<img src="${mediaContent}" alt="${title}" />`
-            : `<video src="${mediaContent}" />`
+            ? `<img id="lightbox-media-content" src="${mediaContent}" alt="${title}" />`
+            : `<video id="lightbox-media-content" src="${mediaContent}" />`
         }
         
-        <p class="lightbox__media__name">${title}</p>
+        <p id="lightbox-media-title" class="lightbox__media__name">${title}</p>
         </div>
         <a class="lightbox__arrow-right" href="" aria-label="média suivant"
         ><i class="fa fa-angle-right"></i
@@ -34,5 +34,5 @@ function lightboxFactory(data) {
 
     return lightbox;
   }
-  return { title, mediaContent, getLightboxDOM };
+  return { id, title, mediaContent, getLightboxDOM };
 }
