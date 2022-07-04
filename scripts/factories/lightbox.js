@@ -22,7 +22,7 @@ function lightboxFactory(data) {
         ${
           image
             ? `<img id="lightbox-media-content" src="${mediaContent}" alt="${title}" />`
-            : `<video id="lightbox-media-content" src="${mediaContent}" />`
+            : `<video controls id="lightbox-media-content" src="${mediaContent}" />`
         }
         
         <p id="lightbox-media-title" class="lightbox__media__name">${title}</p>
