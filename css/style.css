@@ -183,19 +183,32 @@ a {
 .selection-default {
   color: white;
   background-color: #901c1c;
-  width: 100px;
-  height: 40px;
+  width: 130px;
+  height: 55px;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: space-between;
   padding-left: 10px;
+  padding-right: 10px;
   border-radius: 3px;
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
 }
 .selection-default :hover {
   background-color: #d3573c;
   color: black;
+}
+.selection-default option {
+  background-color: #901c1c;
+}
+.selection-default option:hover {
+  background-color: #d3573c;
+  cursor: pointer;
+  color: black;
+  font-size: 18px;
 }
 
 .contact-form__row {
@@ -411,6 +424,18 @@ a {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+  }
+}
+
+.filters {
+  margin: 0 100px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 992px) {
+  .filters {
+    margin: 20px 20px;
   }
 }
 

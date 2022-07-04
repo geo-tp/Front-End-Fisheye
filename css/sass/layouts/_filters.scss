@@ -1,0 +1,10 @@
+.filters {
+  margin: 0 100px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+
+  @include tablet-design {
+    margin: 20px 20px;
+  }
+}
