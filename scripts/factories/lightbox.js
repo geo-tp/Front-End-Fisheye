@@ -1,5 +1,5 @@
 function lightboxFactory(data) {
-  const { title, mediaContent } = data;
+  const { title, mediaContent, isImage } = data;
 
   function getLightboxDOM() {
     const lightbox = `      
@@ -18,7 +18,12 @@ function lightboxFactory(data) {
         ></a>
 
         <div class="lightbox__media">
-        <img src="${mediaContent}" alt="${title}" />
+        ${
+          isImage
+            ? `<img src="${mediaContent}" alt="${title}" />`
+            : `<video src="${mediaContent}" />`
+        }
+        
         <p class="lightbox__media__name">${title}</p>
         </div>
         <a class="lightbox__arrow-right" href="" aria-label="média suivant"

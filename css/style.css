@@ -192,17 +192,23 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #901c1c;
+  width: 60%;
 }
 .lightbox__arrow-left, .lightbox__arrow-right {
   font-size: 60px;
   padding: 20px;
 }
+.lightbox__media {
+  width: 100%;
+  height: 80vh;
+  margin: 0 auto;
+}
 .lightbox__media img,
 .lightbox__media video {
-  object-fit: cover;
-  object-position: top;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: top;
   border-radius: 3px;
 }
 .lightbox__media__name {
@@ -255,7 +261,7 @@ a {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background-color: #c4c4c485;
+  background-color: #c4c4c4c8;
   display: none;
 }
 .contact-modal__container {
@@ -275,6 +281,7 @@ a {
 }
 
 .lightbox-modal {
+  display: none;
   top: 0%;
   position: fixed;
   height: 100vh;

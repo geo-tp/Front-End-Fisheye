@@ -1,7 +1,8 @@
 .lightbox-modal {
+  display: none;
   top: 0%;
   position: fixed;
   height: 100vh;
   width: 100%;
-  background-color: #c4c4c4c8;
+  background-color: $modal-background;
 }

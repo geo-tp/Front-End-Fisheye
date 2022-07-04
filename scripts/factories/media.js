@@ -4,7 +4,7 @@ function mediaFactory(data) {
   const mediaContent = `assets/portfolio/${photographerId}/${
     video ? video : image
   }`;
-  const lightboxData = { title, mediaContent };
+  const lightboxData = { title, mediaContent, isImage: image ? true : false };
 
   function getMediaCardDOM() {
     let mediaContentDOM = null;
