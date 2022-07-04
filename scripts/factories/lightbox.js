@@ -1,5 +1,6 @@
 function lightboxFactory(data) {
-  const { id, title, mediaContent, isImage } = data;
+  const { id, title, image, video } = data;
+  const mediaContent = formatMediaPath(data);
 
   function getLightboxDOM() {
     const lightbox = `      
@@ -10,23 +11,23 @@ function lightboxFactory(data) {
         onclick="closeLightbox()"
         aria-label="fermer l'image"
         >
-        <i class="fas fa-close"></i>
+          <i class="fas fa-close"></i>
         </button>
 
-        <a class="lightbox__arrow-left" href="" aria-label="média précédent"
+        <a class="lightbox__arrow-left" onclick="previousMedia()" aria-label="média précédent"
         ><i class="fas fa-angle-left"></i
         ></a>
 
         <div class="lightbox__media">
         ${
-          isImage
+          image
             ? `<img id="lightbox-media-content" src="${mediaContent}" alt="${title}" />`
             : `<video id="lightbox-media-content" src="${mediaContent}" />`
         }
         
         <p id="lightbox-media-title" class="lightbox__media__name">${title}</p>
         </div>
-        <a class="lightbox__arrow-right" href="" aria-label="média suivant"
+        <a class="lightbox__arrow-right" onclick="nextMedia()" aria-label="média suivant"
         ><i class="fa fa-angle-right"></i
         ></a>
     </div>

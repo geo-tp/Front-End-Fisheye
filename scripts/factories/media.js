@@ -1,9 +1,8 @@
 function mediaFactory(data) {
   const { id, photographerId, title, image, video, likes, date, price } = data;
 
-  const mediaContent = `assets/portfolio/${photographerId}/${
-    video ? video : image
-  }`;
+  const mediaContent = formatMediaPath(data);
+
   const lightboxData = {
     id,
     photographerId,
@@ -23,7 +22,7 @@ function mediaFactory(data) {
       mediaContentDOM.alt = title;
     }
 
-    mediaContentDOM.onclick = () => displayLightbox(lightboxData);
+    mediaContentDOM.onclick = () => displayLightbox(data);
 
     mediaInfoDOM = document.createElement("div");
     mediaInfoDOM.classList.add("media-card__infos");
