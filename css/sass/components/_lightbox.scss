@@ -45,4 +45,36 @@
       font-size: 80px;
     }
   }
+
+  @include tablet-design {
+    width: 80%;
+  }
+
+  @include mobile-design {
+    width: 96%;
+    padding-top: 100px;
+    &__arrow-left,
+    &__arrow-right {
+      position: absolute;
+      top: 4%;
+      padding: 0;
+      font-size: 40px;
+    }
+    &__arrow-left {
+      left: 10%;
+    }
+    &__arrow-right {
+      left: 30%;
+    }
+    &__close {
+      position: absolute;
+      top: 5%;
+      right: 10%;
+      color: $primary;
+
+      & i {
+        font-size: 40px;
+      }
+    }
+  }
 }

@@ -17,4 +17,10 @@
     background-color: $secondary;
     color: black;
   }
+
+  @include tablet-design {
+    width: 150px;
+    height: 60px;
+    font-size: 18px;
+  }
 }

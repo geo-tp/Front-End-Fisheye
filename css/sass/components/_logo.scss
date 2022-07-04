@@ -1,4 +1,6 @@
 .logo {
-  height: 50px;
-  margin-left: 100px;
+  width: 150px;
+  @include tablet-design {
+    margin-left: 10px;
+  }
 }

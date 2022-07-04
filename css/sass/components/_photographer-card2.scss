@@ -27,4 +27,19 @@
       color: $alt3;
     }
   }
+
+  @include tablet-design {
+    &__infos {
+      &__description {
+        display: none;
+      }
+
+      &__name {
+        font-size: 30px;
+      }
+
+      &__location {
+      }
+    }
+  }
 }

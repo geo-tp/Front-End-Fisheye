@@ -3,17 +3,8 @@ body {
   margin: 0;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 90px;
-}
-
 h1 {
   color: #901c1c;
-  margin-right: 100px;
 }
 
 a {
@@ -22,8 +13,12 @@ a {
 }
 
 .logo {
-  height: 50px;
-  margin-left: 100px;
+  width: 150px;
+}
+@media screen and (max-width: 992px) {
+  .logo {
+    margin-left: 10px;
+  }
 }
 
 .photographer-picture {
@@ -41,6 +36,7 @@ a {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 50px;
 }
 .photographer-card1__name {
   color: #d3573c;
@@ -55,6 +51,16 @@ a {
 }
 .photographer-card1__infos__pricing {
   color: #c4c4c4;
+}
+@media screen and (max-width: 992px) {
+  .photographer-card1 {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .photographer-card1 {
+    flex-basis: 100%;
+  }
 }
 
 .photographer-card2 {
@@ -79,11 +85,20 @@ a {
 .photographer-card2__infos__pricing {
   color: #c4c4c4;
 }
+@media screen and (max-width: 992px) {
+  .photographer-card2__infos__description {
+    display: none;
+  }
+  .photographer-card2__infos__name {
+    font-size: 30px;
+  }
+}
 
 .media-card {
   flex-basis: 28%;
   color: #901c1c;
   padding-bottom: 20px;
+  flex-wrap: wrap;
 }
 .media-card img,
 .media-card video {
@@ -106,6 +121,16 @@ a {
 .media-card__infos a {
   padding-left: 7px;
 }
+@media screen and (max-width: 992px) {
+  .media-card {
+    flex-basis: 48%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .media-card {
+    flex-basis: 100%;
+  }
+}
 
 .button-default {
   background-color: #901c1c;
@@ -126,6 +151,13 @@ a {
 .button-default:hover {
   background-color: #d3573c;
   color: black;
+}
+@media screen and (max-width: 992px) {
+  .button-default {
+    width: 150px;
+    height: 60px;
+    font-size: 18px;
+  }
 }
 
 .button-like {
@@ -182,6 +214,15 @@ a {
   font-size: 18px;
 }
 
+.logo {
+  width: 150px;
+}
+@media screen and (max-width: 992px) {
+  .logo {
+    margin-left: 10px;
+  }
+}
+
 .lightbox {
   display: flex;
   justify-content: center;
@@ -224,6 +265,38 @@ a {
 .lightbox__close i {
   font-size: 80px;
 }
+@media screen and (max-width: 992px) {
+  .lightbox {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lightbox {
+    width: 96%;
+    padding-top: 100px;
+  }
+  .lightbox__arrow-left, .lightbox__arrow-right {
+    position: absolute;
+    top: 4%;
+    padding: 0;
+    font-size: 40px;
+  }
+  .lightbox__arrow-left {
+    left: 10%;
+  }
+  .lightbox__arrow-right {
+    left: 30%;
+  }
+  .lightbox__close {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    color: #901c1c;
+  }
+  .lightbox__close i {
+    font-size: 40px;
+  }
+}
 
 .photographer-header {
   background-color: #fafafa;
@@ -234,12 +307,33 @@ a {
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+  flex-wrap: wrap;
 }
 .photographer-header div {
   flex-basis: 33%;
 }
 .photographer-header__picture {
   text-align: right;
+}
+@media screen and (max-width: 992px) {
+  .photographer-header {
+    height: unset;
+    margin: 0 20px;
+  }
+  .photographer-header__picture img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .photographer-header div {
+    flex-basis: 100%;
+  }
+  .photographer-header__picture img {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+  }
 }
 
 .photographer-media {
@@ -248,12 +342,17 @@ a {
   margin: 0 100px;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 992px) {
+  .photographer-media {
+    margin: 20px;
+  }
+}
 
 .photographers {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 70px;
   margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .contact-modal {
@@ -287,6 +386,32 @@ a {
   height: 100vh;
   width: 100%;
   background-color: #c4c4c4c8;
+}
+
+.main {
+  max-width: 1400px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 1400px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+@media screen and (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

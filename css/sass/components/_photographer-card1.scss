@@ -6,6 +6,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 50px;
 
   &__name {
     color: $secondary;
@@ -27,5 +28,13 @@
     &__pricing {
       color: $alt3;
     }
+  }
+
+  @include tablet-design {
+    flex-basis: 50%;
+  }
+
+  @include mobile-design {
+    flex-basis: 100%;
   }
 }

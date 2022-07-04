@@ -1,4 +1,5 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./base/global";
 @import "./components/logo";
 @import "./components/photographer-picture";
@@ -10,9 +11,12 @@
 @import "./components/button-close";
 @import "./components/selection-default";
 @import "./components/contact_form";
+@import "./components/logo";
 @import "./components/lightbox";
 @import "./layouts/photographer-header";
 @import "./layouts/photographer-media";
 @import "./layouts/photographers";
 @import "./layouts/contact-modal";
 @import "./layouts/lightbox-modal";
+@import "./layouts/main";
+@import "./layouts/header";

@@ -1,0 +1,19 @@
+.header {
+  max-width: $max-resolution;
+  min-width: $min-resolution;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+
+  @include tablet-design {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}

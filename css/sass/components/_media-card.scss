@@ -2,6 +2,7 @@
   flex-basis: 28%;
   color: #901c1c;
   padding-bottom: 20px;
+  flex-wrap: wrap;
 
   & img,
   video {
@@ -26,5 +27,12 @@
     & a {
       padding-left: 7px;
     }
+  }
+
+  @include tablet-design {
+    flex-basis: 48%;
+  }
+  @include mobile-design {
+    flex-basis: 100%;
   }
 }
