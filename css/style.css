@@ -439,4 +439,29 @@ a {
   }
 }
 
+.photographer-overlay {
+  position: fixed;
+  bottom: 0%;
+  right: 3%;
+  background-color: #d3573c;
+  height: 30px;
+  z-index: 50;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+}
+.photographer-overlay__like {
+  margin-right: 20px;
+  cursor: default;
+  color: black;
+}
+.photographer-overlay__like i {
+  padding-left: 7px;
+}
+.photographer-overlay__pricing {
+  margin-left: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

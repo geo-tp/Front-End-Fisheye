@@ -1,0 +1,27 @@
+.photographer-overlay {
+  position: fixed;
+  bottom: 0%;
+  right: 3%;
+  background-color: $secondary;
+  height: 30px;
+  z-index: 50;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+
+  &__like {
+    margin-right: 20px;
+    cursor: default;
+    color: black;
+
+    & i {
+      padding-left: 7px;
+    }
+  }
+
+  &__pricing {
+    margin-left: 20px;
+  }
+}

@@ -2,7 +2,7 @@ async function displayPhotographerHeader(photographer) {
   const photographerHeader = document.querySelector(".photographer-header");
   const photographerHeaderModel = photographerHeaderFactory(photographer);
   const userHeaderDom = photographerHeaderModel.getUserHeaderDOM();
-  photographerHeader.innerHTML = userHeaderDom;
+  photographerHeader.parentNode.replaceChild(userHeaderDom, photographerHeader);
 }
 
 async function displayMedia(media) {
@@ -11,6 +11,16 @@ async function displayMedia(media) {
   const mediaCardDOM = photographerMediaModel.getMediaCardDOM();
 
   photographerMedia.appendChild(mediaCardDOM);
+}
+
+function displayPhotographerOverlay(photographer, media) {
+  const photographerOverlay = document.querySelector(".photographer-overlay");
+  const photographerMediaModel = photographerOverlayFactory({
+    photographer,
+    media,
+  });
+  const overlayDOM = photographerMediaModel.getUserOverlayDOM();
+  photographerOverlay.appendChild(overlayDOM);
 }
 
 async function init() {
@@ -24,6 +34,8 @@ async function init() {
   for (let media of photographerMedia) {
     displayMedia(media);
   }
+
+  displayPhotographerOverlay(photographer, photographerMedia);
 }
 
 init();

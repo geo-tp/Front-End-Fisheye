@@ -3,8 +3,7 @@ function lightboxFactory(data) {
   const mediaContent = formatMediaPath(data);
 
   function getLightboxDOM() {
-    const lightbox = `      
-    <div class="lightbox">
+    const content = `      
         <button
         class="button-close lightbox__close"
         src="assets/icons/close.svg"
@@ -30,10 +29,13 @@ function lightboxFactory(data) {
         <a class="lightbox__arrow-right" onclick="nextMedia()" aria-label="média suivant"
         ><i class="fa fa-angle-right"></i
         ></a>
-    </div>
         `;
+
+    const lightbox = document.createElement("div");
+    lightbox.classList.add("lightbox");
+    lightbox.innerHTML = content;
 
     return lightbox;
   }
-  return { id, title, mediaContent, getLightboxDOM };
+  return { id, title, image, video, getLightboxDOM };
 }

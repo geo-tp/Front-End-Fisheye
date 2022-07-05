@@ -21,7 +21,11 @@ function photographerHeaderFactory(data) {
           </div>
       `;
 
-    return content;
+    const photographerHeader = document.createElement("div");
+    photographerHeader.classList.add("photographer-header");
+    photographerHeader.innerHTML = content;
+
+    return photographerHeader;
   }
 
   return {

@@ -12,9 +12,10 @@ async function displayLightbox(data) {
   photographerMedia = await getMediaByPhotographerId(data.photographerId);
   document.addEventListener("keydown", lightboxKeyboardEvent);
   const lightboxModal = document.querySelector(".lightbox-modal");
+  const lightbox = document.querySelector(".lightbox");
   const lightboxModel = lightboxFactory(data);
   const lightboxDom = lightboxModel.getLightboxDOM();
-  lightboxModal.innerHTML = lightboxDom;
+  lightbox.parentNode.replaceChild(lightboxDom, lightbox);
   lightboxModal.style.display = "block";
 }
 
