@@ -22,11 +22,31 @@
       <div class="photographer-header"></div>
       <div class="filters">
         <h3>Trier par</h3>
-        <select class="selection-default" name="" id="">
+        <div class="filters__container">
+          <button
+            class="button-default filters__container__button"
+            aria-expanded="true"
+            aria-haspopup="listbox"
+            labelledby="sort-label"
+          >
+            <span id="active-filter">Popularité</span>
+            <i class="fas fa-angle-down"></i>
+          </button>
+          <ul class="filters__container__list">
+            <li class="filters__container__list__item" id="inactive-filter1">
+              Date
+            </li>
+            <li class="filters__container__list__item" id="inactive-filter2">
+              Titre
+            </li>
+          </ul>
+        </div>
+
+        <!-- <select class="selection-default" name="" id="">
           <option value="">Popularité</option>
           <option value="">Date</option>
           <option value="">Titre</option>
-        </select>
+        </select> -->
       </div>
       <div class="photographer-media"></div>
     </main>
