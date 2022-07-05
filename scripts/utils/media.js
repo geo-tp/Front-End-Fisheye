@@ -7,13 +7,17 @@ function formatMediaPath(media) {
 }
 
 function incrementMediaLikes(mediaId) {
-  if (mediaAlreadyLiked.includes(mediaId)) {
-    return;
-  }
-
   const likesDOM = document.getElementById(`media-${mediaId}`);
   const likeTotalCountDOM = document.getElementById("likes-total-count");
-  likesDOM.textContent = parseInt(likesDOM.textContent) + 1;
-  likeTotalCountDOM.textContent = parseInt(likeTotalCountDOM.textContent) + 1;
-  mediaAlreadyLiked.push(mediaId);
+  if (mediaAlreadyLiked.includes(mediaId)) {
+    likesDOM.textContent = parseInt(likesDOM.textContent) - 1;
+    likeTotalCountDOM.textContent = parseInt(likeTotalCountDOM.textContent) - 1;
+    mediaIndex = mediaAlreadyLiked.indexOf(mediaId);
+    mediaAlreadyLiked.splice(mediaIndex, 1);
+    return;
+  } else {
+    likesDOM.textContent = parseInt(likesDOM.textContent) + 1;
+    likeTotalCountDOM.textContent = parseInt(likeTotalCountDOM.textContent) + 1;
+    mediaAlreadyLiked.push(mediaId);
+  }
 }
