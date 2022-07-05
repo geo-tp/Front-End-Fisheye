@@ -445,6 +445,7 @@ a {
   margin-left: 20px;
 }
 .filters__container__list {
+  display: none;
   position: absolute;
   top: 40px;
   left: 0;
