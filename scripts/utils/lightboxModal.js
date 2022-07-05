@@ -1,5 +1,5 @@
 let currentLightboxMedia = null;
-let photographerMedia = null;
+// let photographerMedia = null;
 
 function closeLightbox() {
   const lightboxModal = document.querySelector(".lightbox-modal");
