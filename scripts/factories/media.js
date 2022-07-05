@@ -28,7 +28,10 @@ function mediaFactory(data) {
     mediaInfoDOM.classList.add("media-card__infos");
     mediaInfoDOM.innerHTML = `      
       <div class="media-card__infos__name">${title}</div>
-      <button class="button-like">${likes} <a class="fa fa-heart"></a></button>
+      <button class="button-like" onclick='incrementMediaLikes(${id})'>
+        <span id=media-${id}>${likes}</span>
+        <a class="fa fa-heart"></a>
+      </button>
       `;
 
     const media = document.createElement("div");

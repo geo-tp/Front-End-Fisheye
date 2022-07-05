@@ -10,7 +10,7 @@ function photographerOverlayFactory(data) {
 
     const content = `
                 <div class="button-like photographer-overlay__like">
-                    ${likeCount} <i class="fas fa-heart"></i>
+                    <span id="likes-total-count">${likeCount}</span> <i class="fas fa-heart"></i>
                 </div>
                 <div class="photographer-overlay__pricing">${photographer.price}€/jour</div>
         `;
