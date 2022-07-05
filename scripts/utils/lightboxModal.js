@@ -3,12 +3,14 @@ let photographerMedia = null;
 
 function closeLightbox() {
   const lightboxModal = document.querySelector(".lightbox-modal");
+  document.removeEventListener("keydown", lightboxKeyboardEvent);
   lightboxModal.style.display = "none";
 }
 
 async function displayLightbox(data) {
   currentLightboxMedia = data;
   photographerMedia = await getMediaByPhotographerId(data.photographerId);
+  document.addEventListener("keydown", lightboxKeyboardEvent);
   const lightboxModal = document.querySelector(".lightbox-modal");
   const lightboxModel = lightboxFactory(data);
   const lightboxDom = lightboxModel.getLightboxDOM();
@@ -66,5 +68,17 @@ function previousMedia() {
 
       break;
     }
+  }
+}
+
+function lightboxKeyboardEvent(e) {
+  if (e.key === "Escape" || e.key === "Esc") {
+    closeLightbox();
+  }
+  if (e.key === "ArrowLeft") {
+    previousMedia();
+  }
+  if (e.key === "ArrowRight") {
+    nextMedia();
   }
 }
