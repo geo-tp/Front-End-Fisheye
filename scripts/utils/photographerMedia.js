@@ -1,13 +1,19 @@
 mediaAlreadyLiked = [];
 let photographerMedia = [];
 
-async function displayPhotographerMedia(media) {
-  photographerMedia = media;
+async function displayPhotographerMedia(photographerMedia) {
   const photographerMediaDOM = document.querySelector(".photographer-media");
-  const photographerMediaModel = mediaFactory(media);
-  const mediaCardDOM = photographerMediaModel.getMediaCardDOM();
 
-  photographerMediaDOM.appendChild(mediaCardDOM);
+  for (let media of photographerMedia) {
+    const photographerMediaModel = mediaFactory(media);
+    const mediaCardDOM = photographerMediaModel.getMediaCardDOM();
+    photographerMediaDOM.appendChild(mediaCardDOM);
+  }
+}
+
+function resetPhotographerMedia() {
+  const photographerMediaDOM = document.querySelector(".photographer-media");
+  photographerMediaDOM.innerHTML = "";
 }
 
 function formatMediaPath(media) {
