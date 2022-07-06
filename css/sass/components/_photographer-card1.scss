@@ -13,20 +13,22 @@
     font-weight: 400;
     font-size: 36px;
     text-decoration: none;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 
   &__infos {
     &__location {
       color: $secondary;
       font-weight: 400;
+      margin-bottom: 7px;
     }
 
     &__description {
+      margin-bottom: 7px;
     }
 
     &__pricing {
-      color: $alt3;
+      color: $alt2;
     }
   }
 

@@ -14,6 +14,7 @@ a {
 
 .logo {
   width: 150px;
+  margin-left: 100px;
 }
 @media screen and (max-width: 992px) {
   .logo {
@@ -43,14 +44,18 @@ a {
   font-weight: 400;
   font-size: 36px;
   text-decoration: none;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .photographer-card1__infos__location {
   color: #d3573c;
   font-weight: 400;
+  margin-bottom: 7px;
+}
+.photographer-card1__infos__description {
+  margin-bottom: 7px;
 }
 .photographer-card1__infos__pricing {
-  color: #c4c4c4;
+  color: #525252;
 }
 @media screen and (max-width: 992px) {
   .photographer-card1 {
@@ -83,14 +88,14 @@ a {
   font-weight: 400;
 }
 .photographer-card2__infos__pricing {
-  color: #c4c4c4;
+  color: #525252;
 }
 @media screen and (max-width: 992px) {
-  .photographer-card2__infos__description {
-    display: none;
-  }
   .photographer-card2__infos__name {
     font-size: 30px;
+  }
+  .photographer-card2__infos__description {
+    padding-bottom: 10px;
   }
 }
 
@@ -99,6 +104,7 @@ a {
   color: #901c1c;
   padding-bottom: 20px;
   flex-wrap: wrap;
+  position: relative;
 }
 .media-card img,
 .media-card video {
@@ -108,6 +114,13 @@ a {
   object-position: top;
   border-radius: 12px;
   cursor: pointer;
+}
+.media-card__video-play {
+  position: absolute;
+  left: 5%;
+  top: 4%;
+  color: #d3573c;
+  font-size: 20px;
 }
 .media-card__infos {
   display: flex;
@@ -229,6 +242,7 @@ a {
 
 .logo {
   width: 150px;
+  margin-left: 100px;
 }
 @media screen and (max-width: 992px) {
   .logo {
@@ -318,9 +332,15 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   flex-wrap: wrap;
+}
+.photographer-header__contact {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 60px;
+  font-size: 18px;
 }
 .photographer-header div {
   flex-basis: 33%;
@@ -373,7 +393,7 @@ a {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background-color: #c4c4c4c8;
+  background-color: #a9a9a9c8;
   display: none;
 }
 .contact-modal__container {
@@ -411,7 +431,7 @@ a {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background-color: #c4c4c4c8;
+  background-color: #a9a9a9c8;
 }
 
 .main {
@@ -496,13 +516,16 @@ a {
   height: 30px;
   z-index: 50;
   display: flex;
-  padding: 10px 20px;
+  padding: 15px 30px;
   font-size: 24px;
   color: black;
   font-weight: bold;
+  border-radius: 4px;
 }
 .photographer-overlay__like {
+  min-width: 100px;
   margin-right: 20px;
+  text-align: left;
   cursor: default;
   color: black;
 }

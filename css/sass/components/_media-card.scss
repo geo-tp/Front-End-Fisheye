@@ -3,7 +3,7 @@
   color: #901c1c;
   padding-bottom: 20px;
   flex-wrap: wrap;
-
+  position: relative;
   & img,
   video {
     width: 100%;
@@ -12,6 +12,15 @@
     object-position: top;
     border-radius: 12px;
     cursor: pointer;
+  }
+
+  &__video-play {
+    position: absolute;
+    left: 5%;
+    top: 4%;
+    color: $secondary;
+    // transform: translateX(-50%);
+    font-size: 20px;
   }
 
   &__infos {

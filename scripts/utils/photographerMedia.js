@@ -1,4 +1,4 @@
-mediaAlreadyLiked = [];
+let mediaAlreadyLiked = [];
 let photographerMedia = [];
 
 async function displayPhotographerMedia(photographerMedia) {

@@ -12,7 +12,7 @@ function photographerHeaderFactory(data) {
             <div class="photographer-card2__infos__description">${tagline}</div>      
           </div>
   
-          <button class="button-default" onclick="displayModal()">
+          <button class="button-default photographer-header__contact" onclick="displayModal()">
             Contactez-moi
           </button>
   

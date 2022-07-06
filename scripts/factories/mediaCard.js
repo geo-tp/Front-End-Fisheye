@@ -13,9 +13,15 @@ function mediaFactory(data) {
 
   function getMediaCardDOM() {
     let mediaContentDOM = null;
+    const media = document.createElement("div");
+    media.classList.add("media-card");
+
     if (video) {
       mediaContentDOM = document.createElement("video");
       mediaContentDOM.src = mediaContent;
+      playButton = document.createElement("i");
+      playButton.classList.add("fas", "fa-video", "media-card__video-play");
+      media.appendChild(playButton);
     } else {
       mediaContentDOM = document.createElement("img");
       mediaContentDOM.src = mediaContent;
@@ -34,8 +40,6 @@ function mediaFactory(data) {
       </button>
       `;
 
-    const media = document.createElement("div");
-    media.classList.add("media-card");
     media.appendChild(mediaContentDOM);
     media.appendChild(mediaInfoDOM);
 
