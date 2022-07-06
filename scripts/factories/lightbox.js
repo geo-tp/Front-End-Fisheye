@@ -10,7 +10,7 @@ function lightboxFactory(data) {
         onclick="closeLightbox()"
         aria-label="fermer l'image"
         >
-          <i class="fas fa-close" aria-hidden="true"></i>
+          <i class="fas fa-close"></i>
         </button>
 
         <a class="lightbox__arrow-left" onclick="previousMedia()" aria-label="média précédent"
