@@ -43,5 +43,13 @@
   }
   @include mobile-design {
     flex-basis: 100%;
+
+    & span {
+      font-size: 20px;
+
+      & i {
+        font-size: 20px;
+      }
+    }
   }
 }

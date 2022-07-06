@@ -161,6 +161,12 @@ a {
   .media-card {
     flex-basis: 100%;
   }
+  .media-card span {
+    font-size: 20px;
+  }
+  .media-card span i {
+    font-size: 20px;
+  }
 }
 
 .button-default {
@@ -199,6 +205,10 @@ a {
   background-color: transparent;
   color: #901c1c;
   border: none;
+  transition: all 200ms;
+}
+.button-like:active {
+  transform: scale(1.4);
 }
 
 .button-close {
@@ -409,6 +419,7 @@ a {
   margin: 0 100px;
   margin-bottom: 60px;
   flex-wrap: wrap;
+  animation: appear-slowly 2s linear;
 }
 @media screen and (max-width: 992px) {
   .photographer-media {

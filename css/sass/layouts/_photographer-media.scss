@@ -4,6 +4,7 @@
   margin: 0 100px;
   margin-bottom: 60px;
   flex-wrap: wrap;
+  animation: appear-slowly 2s linear;
 
   @include tablet-design {
     margin: 20px;

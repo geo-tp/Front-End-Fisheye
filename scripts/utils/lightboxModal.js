@@ -23,6 +23,8 @@ async function displayLightbox(data) {
 
   let main = document.getElementById("main");
   main.setAttribute("aria-hidden", true);
+
+  closeFilters();
 }
 
 function updateMedia() {

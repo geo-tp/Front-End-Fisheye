@@ -5,6 +5,8 @@ function displayContactModal() {
   let main = document.getElementById("main");
   main.setAttribute("aria-hidden", true);
   document.addEventListener("keydown", contactKeyboardEvent);
+
+  closeFilters();
 }
 
 function closeContactModal() {

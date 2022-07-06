@@ -4,11 +4,11 @@ const inactiveFilter1 = document.getElementById("inactive-filter1");
 const inactiveFilter2 = document.getElementById("inactive-filter2");
 const filtersList = document.getElementById("filters-list");
 
-filtersButton.addEventListener("click", ShowOrHideFilters);
+filtersButton.addEventListener("click", displayOrCloseFilters);
 inactiveFilter1.addEventListener("click", () => changeFilter(inactiveFilter1));
 inactiveFilter2.addEventListener("click", () => changeFilter(inactiveFilter2));
 
-function ShowOrHideFilters() {
+function displayOrCloseFilters() {
   if (filtersList.style.display == "block") {
     filtersList.style.display = "none";
     filtersButton.setAttribute("aria-expanded", false);
@@ -16,6 +16,11 @@ function ShowOrHideFilters() {
     filtersList.style.display = "block";
     filtersButton.setAttribute("aria-expanded", true);
   }
+}
+
+function closeFilters() {
+  filtersList.style.display = "none";
+  filtersButton.setAttribute("aria-expanded", false);
 }
 
 function changeFilter(filterDOM) {
@@ -40,7 +45,7 @@ function changeFilter(filterDOM) {
 
   resetPhotographerMedia();
   displayPhotographerMedia(photographerMedia);
-  ShowOrHideFilters();
+  displayOrCloseFilters();
 }
 
 function filterByPopularity() {
