@@ -10,11 +10,11 @@ function lightboxFactory(data) {
         onclick="closeLightbox()"
         aria-label="fermer l'image"
         >
-          <i class="fas fa-close"></i>
+          <i class="fas fa-close" aria-hidden="true"></i>
         </button>
 
         <a class="lightbox__arrow-left" onclick="previousMedia()" aria-label="média précédent"
-        ><i class="fas fa-angle-left"></i
+        ><i class="fas fa-angle-left" aria-hidden="true"></i
         ></a>
 
         <div class="lightbox__media">
@@ -27,7 +27,7 @@ function lightboxFactory(data) {
         <p id="lightbox-media-title" class="lightbox__media__name">${title}</p>
         </div>
         <a class="lightbox__arrow-right" onclick="nextMedia()" aria-label="média suivant"
-        ><i class="fa fa-angle-right"></i
+        ><i class="fa fa-angle-right" aria-hidden="true"></i
         ></a>
         `;
 

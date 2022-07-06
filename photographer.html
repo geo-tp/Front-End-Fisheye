@@ -18,22 +18,27 @@
   </head>
   <body>
     <header class="header">
-      <a href="index.html"><img src="assets/images/logo.png" class="logo" /></a>
+      <a href="index.html"
+        ><img
+          src="assets/images/logo.png"
+          alt="Logo Fisheye - Page d'accueil"
+          class="logo"
+      /></a>
     </header>
-    <main id="main" class="main">
+    <main id="main" class="main" aria-hidden="false">
       <div class="photographer-header"></div>
       <div class="filters">
-        <h3>Trier par</h3>
+        <h3 id="filters-title">Trier par</h3>
         <div class="filters__container">
           <button
             id="filters-btn"
+            aria-expanded="false"
+            aria-haspopup="fitres d'image"
+            labelledby="filters-title"
             class="button-default filters__container__button"
-            aria-expanded="true"
-            aria-haspopup="listbox"
-            labelledby="sort-label"
           >
-            <span id="active-filter">Popularité</span>
-            <i class="fas fa-angle-down"></i>
+            <span id="active-filter" aria-current="filtre">Popularité</span>
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
           </button>
           <ul id="filters-list" class="filters__container__list">
             <li class="filters__container__list__item" id="inactive-filter1">
@@ -46,42 +51,74 @@
         </div>
       </div>
       <div class="photographer-media"></div>
+      <div class="photographer-overlay"></div>
     </main>
-    <div id="contact_modal" class="contact-modal">
+    <div
+      id="contact_modal"
+      class="contact-modal"
+      role="dialog"
+      aria-describedby="contact-title"
+    >
       <div class="contact-modal__container">
         <button
           class="contact-modal__container__close button-close"
-          onclick="closeModal()"
+          onclick="closeContactModal()"
           aria-label="fermer la fenêtre de contact"
         >
-          <i class="fas fa-close"></i>
+          <i id="contact-close" class="fas fa-close"></i>
         </button>
         <header class="contact-modal__container__header">
-          <h2>Contactez-moi</h2>
+          <h2 id="contact-title">Contactez-moi</h2>
         </header>
-        <form class="contact-form">
+        <form class="contact-form" role="contact">
           <div class="contact-form__row">
-            <label>Prénom</label>
-            <input />
+            <label for="firstname">Prénom</label>
+            <input
+              id="firstname"
+              name="firstname"
+              type="text"
+              required
+              aria-required="true"
+            />
           </div>
           <div class="contact-form__row">
-            <label>Nom</label>
-            <input />
+            <label for="lastname">Nom</label>
+            <input
+              id="lastname"
+              name="lastname"
+              type="text"
+              aria-label="Nom"
+              required
+              aria-required="true"
+            />
           </div>
           <div class="contact-form__row">
-            <label>Email</label>
-            <input />
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="text"
+              required
+              aria-required="true"
+            />
           </div>
           <div class="contact-form__row">
-            <label>Votre message</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <label for="message">Votre message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              required
+              aria-required="true"
+              maxlength="2000"
+            ></textarea>
           </div>
           <button class="button-default contact-form__submit">Envoyer</button>
         </form>
       </div>
     </div>
-    <div class="photographer-overlay"></div>
-    <div class="lightbox-modal">
+    <div class="lightbox-modal" role="dialog">
       <div class="lightbox"></div>
     </div>
     <script src="./scripts/utils/contactModal.js"></script>

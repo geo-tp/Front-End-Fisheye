@@ -11,8 +11,10 @@ inactiveFilter2.addEventListener("click", () => changeFilter(inactiveFilter2));
 function ShowOrHideFilters() {
   if (filtersList.style.display == "block") {
     filtersList.style.display = "none";
+    filtersButton.setAttribute("aria-expanded", false);
   } else {
     filtersList.style.display = "block";
+    filtersButton.setAttribute("aria-expanded", true);
   }
 }
 

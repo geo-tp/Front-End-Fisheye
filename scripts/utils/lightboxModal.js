@@ -1,22 +1,28 @@
+const lightboxModal = document.querySelector(".lightbox-modal");
 let currentLightboxMedia = null;
 // let photographerMedia = null;
 
 function closeLightbox() {
-  const lightboxModal = document.querySelector(".lightbox-modal");
   document.removeEventListener("keydown", lightboxKeyboardEvent);
   lightboxModal.style.display = "none";
+
+  let main = document.getElementById("main");
+  main.setAttribute("aria-hidden", false);
 }
 
 async function displayLightbox(data) {
   currentLightboxMedia = data;
   photographerMedia = await getMediaByPhotographerId(data.photographerId);
   document.addEventListener("keydown", lightboxKeyboardEvent);
-  const lightboxModal = document.querySelector(".lightbox-modal");
   const lightbox = document.querySelector(".lightbox");
   const lightboxModel = lightboxFactory(data);
   const lightboxDom = lightboxModel.getLightboxDOM();
   lightbox.parentNode.replaceChild(lightboxDom, lightbox);
   lightboxModal.style.display = "block";
+  lightboxModal.focus();
+
+  let main = document.getElementById("main");
+  main.setAttribute("aria-hidden", true);
 }
 
 function updateMedia() {
