@@ -9,6 +9,7 @@
   transform: translate(-50%, -50%);
   color: $primary;
   width: 60%;
+  animation: appear-slowy 500ms;
 
   &__arrow-left,
   &__arrow-right {
@@ -52,6 +53,7 @@
 
   @include mobile-design {
     width: 96%;
+    // max-height: 70%;
     padding-top: 100px;
     &__arrow-left,
     &__arrow-right {

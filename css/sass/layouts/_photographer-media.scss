@@ -2,9 +2,11 @@
   display: flex;
   justify-content: space-between;
   margin: 0 100px;
+  margin-bottom: 60px;
   flex-wrap: wrap;
 
   @include tablet-design {
     margin: 20px;
+    margin-bottom: 100px;
   }
 }
