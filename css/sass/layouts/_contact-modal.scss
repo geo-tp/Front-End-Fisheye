@@ -18,7 +18,7 @@
     &__close {
       position: absolute;
       right: 5%;
-      top: 4%;
+      top: 3%;
     }
 
     &__header {
@@ -37,6 +37,12 @@
     &__container {
       width: 80%;
       min-width: 200px;
+
+      &__header {
+        & h2 {
+          font-size: 24px;
+        }
+      }
     }
   }
 }

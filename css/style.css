@@ -408,7 +408,7 @@ a {
 .contact-modal__container__close {
   position: absolute;
   right: 5%;
-  top: 4%;
+  top: 3%;
 }
 .contact-modal__container__header h2 {
   font-size: 48px;
@@ -422,6 +422,9 @@ a {
   .contact-modal__container {
     width: 80%;
     min-width: 200px;
+  }
+  .contact-modal__container__header h2 {
+    font-size: 24px;
   }
 }
 
