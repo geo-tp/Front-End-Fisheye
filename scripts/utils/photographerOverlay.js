@@ -1,9 +1,14 @@
 function displayPhotographerOverlay(photographer, media) {
-  const photographerOverlay = document.querySelector(".photographer-overlay");
+  const photographerOverlayDOM = document.querySelector(
+    ".photographer-overlay"
+  );
   const photographerMediaModel = photographerOverlayFactory({
     photographer,
     media,
   });
   const overlayDOM = photographerMediaModel.getUserOverlayDOM();
-  photographerOverlay.appendChild(overlayDOM);
+  photographerOverlayDOM.parentNode.replaceChild(
+    overlayDOM,
+    photographerOverlayDOM
+  );
 }

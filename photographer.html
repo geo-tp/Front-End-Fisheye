@@ -34,7 +34,7 @@
             id="filters-btn"
             aria-expanded="false"
             aria-haspopup="fitres d'image"
-            labelledby="filters-title"
+            aria-labelledby="filters-title"
             class="button-default filters__container__button"
           >
             <span id="active-filter" aria-current="filtre">Popularité</span>
@@ -51,9 +51,9 @@
         </div>
       </section>
       <section class="photographer-media"></section>
-      <section class="photographer-overlay"></section>
+      <aside class="photographer-overlay"></aside>
     </main>
-    <section
+    <aside
       id="contact_modal"
       class="contact-modal"
       role="dialog"
@@ -79,6 +79,7 @@
               type="text"
               required
               aria-required="true"
+              placeholder="Jean"
             />
           </div>
           <div class="contact-form__row">
@@ -90,6 +91,7 @@
               aria-label="Nom"
               required
               aria-required="true"
+              placeholder="Dupont"
             />
           </div>
           <div class="contact-form__row">
@@ -100,6 +102,7 @@
               type="text"
               required
               aria-required="true"
+              placeholder="example@mail.com"
             />
           </div>
           <div class="contact-form__row">
@@ -112,15 +115,16 @@
               required
               aria-required="true"
               maxlength="2000"
+              placeholder="Entrez ici votre message"
             ></textarea>
           </div>
           <button class="button-default contact-form__submit">Envoyer</button>
         </form>
       </div>
-    </section>
-    <section class="lightbox-modal" role="dialog">
+    </aside>
+    <aside class="lightbox-modal" role="dialog">
       <div class="lightbox"></div>
-    </section>
+    </aside>
     <script src="./scripts/utils/contactModal.js"></script>
     <script src="./scripts/utils/lightboxModal.js"></script>
     <script src="./scripts/utils/mediaFilters.js"></script>

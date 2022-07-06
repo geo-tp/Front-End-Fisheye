@@ -13,7 +13,7 @@ function mediaFactory(data) {
 
   function getMediaCardDOM() {
     let mediaContentDOM = null;
-    const media = document.createElement("div");
+    const media = document.createElement("article");
     media.classList.add("media-card");
 
     if (video) {

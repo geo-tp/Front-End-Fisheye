@@ -15,7 +15,7 @@ function photographerOverlayFactory(data) {
                 <div class="photographer-overlay__pricing">${photographer.price}€/jour</div>
         `;
 
-    const overlay = document.createElement("div");
+    const overlay = document.createElement("aside");
     overlay.classList.add("photographer-overlay");
     overlay.innerHTML = content;
 

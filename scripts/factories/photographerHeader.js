@@ -12,7 +12,11 @@ function photographerHeaderFactory(data) {
             <div class="photographer-card2__infos__description">${tagline}</div>      
           </div>
   
-          <button class="button-default photographer-header__contact" onclick="displayContactModal()">
+          <button 
+              class="button-default photographer-header__contact" 
+              onclick="displayContactModal()"
+              aria-label="ouvrir le formulaire pour contacter ${name}"
+          >
             Contactez-moi
           </button>
   
