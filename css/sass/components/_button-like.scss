@@ -7,14 +7,14 @@
   color: $primary;
   border: none;
   transition: all 200ms;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 
   &:active {
     transform: scale(1.4);
   }
 
   &:focus {
-    border: 1px solid $secondary;
+    border: 2px solid rgb(89, 89, 255);
     border-radius: 5px;
   }
 }

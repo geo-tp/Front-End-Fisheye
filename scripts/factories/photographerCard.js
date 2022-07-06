@@ -9,7 +9,7 @@ function photographerFactory(data) {
         <img class="photographer-picture" src="${picture}" alt="${name}" />
         <h2 class="photographer-card1__name">${name}</h2>        
       </a>
-        <div class="photographer-card1__infos" tabindex="0">
+        <div class="photographer-card1__infos">
           <div class="photographer-card1__infos__location">${city}, ${country}</div>
           <div class="photographer-card1__infos__description">${tagline}</div>
           <div class="photographer-card1__infos__pricing">${price}€/jour</div>

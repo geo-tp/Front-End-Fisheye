@@ -138,10 +138,10 @@ a {
   border: 0;
   background-color: transparent;
   width: 100%;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 .media-card__button-open:focus {
-  border: 1px solid #d3573c;
+  border: 2px solid #5959ff;
   border-radius: 5px;
 }
 .media-card__video-play {
@@ -217,13 +217,13 @@ a {
   color: #901c1c;
   border: none;
   transition: all 200ms;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 .button-like:active {
   transform: scale(1.4);
 }
 .button-like:focus {
-  border: 1px solid #d3573c;
+  border: 2px solid #5959ff;
   border-radius: 5px;
 }
 
@@ -232,6 +232,10 @@ a {
   background-color: transparent;
   color: white;
   cursor: pointer;
+  border: 2px solid transparent;
+}
+.button-close:focus {
+  border: 2px solid #5959ff;
 }
 .button-close i {
   font-size: 3em;
@@ -401,6 +405,10 @@ a {
   padding-bottom: 0;
   height: 60px;
   font-size: 1.1em;
+  border: 2px solid transparent;
+}
+.photographer-header__contact:focus {
+  border: 2px solid #5959ff;
 }
 .photographer-header div {
   flex-basis: 33%;
@@ -544,6 +552,10 @@ a {
   justify-content: space-between;
   padding: 0 20px;
   margin-left: 20px;
+  border: 2px solid transparent;
+}
+.filters__container__button:focus {
+  border: 2px solid #5959ff;
 }
 .filters__container__list {
   animation: appear-slowly-from-top 500ms;

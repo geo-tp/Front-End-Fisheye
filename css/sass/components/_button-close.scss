@@ -3,6 +3,11 @@
   background-color: transparent;
   color: white;
   cursor: pointer;
+  border: 2px solid transparent;
+
+  &:focus {
+    border: 2px solid rgb(89, 89, 255);
+  }
 
   & i {
     font-size: 3em;
