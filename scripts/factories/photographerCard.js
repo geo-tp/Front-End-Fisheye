@@ -5,7 +5,7 @@ function photographerFactory(data) {
 
   function getUserCardDOM() {
     const content = `      
-      <a href="photographer.html?id=${id}" aria-label="${name}">
+      <a href="photographer.html?id=${id}" aria-label="Voir le profil de ${name}">
         <img class="photographer-picture" src="${picture}" alt="${name}" />
         <h2 class="photographer-card1__name">${name}</h2>        
       </a>

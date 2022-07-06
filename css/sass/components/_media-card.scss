@@ -14,6 +14,18 @@
     cursor: pointer;
   }
 
+  &__button-open {
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    border: 1px solid transparent;
+
+    &:focus {
+      border: 1px solid $secondary;
+      border-radius: 5px;
+    }
+  }
+
   &__video-play {
     position: absolute;
     left: 5%;

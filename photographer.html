@@ -18,11 +18,8 @@
   </head>
   <body>
     <header class="header">
-      <a href="index.html"
-        ><img
-          src="assets/images/logo.png"
-          alt="Logo Fisheye - Page d'accueil"
-          class="logo"
+      <a href="index.html" aria-label="Aller à la page d'accueil"
+        ><img src="assets/images/logo.png" alt="Logo Fisheye" class="logo"
       /></a>
     </header>
     <main id="main" class="main" aria-hidden="false">
@@ -41,10 +38,18 @@
             <i class="fas fa-angle-down" aria-hidden="true"></i>
           </button>
           <ul id="filters-list" class="filters__container__list">
-            <li class="filters__container__list__item" id="inactive-filter1">
+            <li
+              class="filters__container__list__item"
+              id="inactive-filter1"
+              tabindex="0"
+            >
               Date
             </li>
-            <li class="filters__container__list__item" id="inactive-filter2">
+            <li
+              class="filters__container__list__item"
+              id="inactive-filter2"
+              tabindex="0"
+            >
               Titre
             </li>
           </ul>
@@ -118,7 +123,13 @@
               placeholder="Entrez ici votre message"
             ></textarea>
           </div>
-          <button class="button-default contact-form__submit">Envoyer</button>
+          <button
+            class="button-default contact-form__submit"
+            aria-label="Envoyer votre message"
+            type="submit"
+          >
+            Envoyer
+          </button>
         </form>
       </div>
     </aside>

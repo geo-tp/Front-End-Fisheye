@@ -7,6 +7,12 @@ const filtersList = document.getElementById("filters-list");
 filtersButton.addEventListener("click", displayOrCloseFilters);
 inactiveFilter1.addEventListener("click", () => changeFilter(inactiveFilter1));
 inactiveFilter2.addEventListener("click", () => changeFilter(inactiveFilter2));
+inactiveFilter1.addEventListener("keydown", (e) =>
+  mediaFiltersKeyboardEvent(e, inactiveFilter1)
+);
+inactiveFilter2.addEventListener("keydown", (e) =>
+  mediaFiltersKeyboardEvent(e, inactiveFilter2)
+);
 
 function displayOrCloseFilters() {
   if (filtersList.style.display == "block") {
@@ -88,4 +94,13 @@ function filterByTitle() {
 
     return 0;
   });
+}
+
+function mediaFiltersKeyboardEvent(e, filter) {
+  if (e.key === "Escape" || e.key === "Esc") {
+    displayOrCloseFilters();
+  }
+  if (e.key === "Enter") {
+    changeFilter(filter);
+  }
 }

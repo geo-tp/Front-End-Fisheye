@@ -28,8 +28,6 @@ function mediaFactory(data) {
       mediaContentDOM.alt = title;
     }
 
-    mediaContentDOM.onclick = () => displayLightbox(data);
-
     mediaInfoDOM = document.createElement("div");
     mediaInfoDOM.classList.add("media-card__infos");
     mediaInfoDOM.innerHTML = `      
@@ -40,7 +38,17 @@ function mediaFactory(data) {
       </button>
       `;
 
-    media.appendChild(mediaContentDOM);
+    let buttonDOM = document.createElement("button");
+    buttonDOM.setAttribute(
+      "aria-label",
+      `ouvrir le média ${title} en plein écran`
+    );
+    buttonDOM.setAttribute("aria-haspopup", `dialog`);
+    buttonDOM.appendChild(mediaContentDOM);
+    buttonDOM.onclick = () => displayLightbox(data);
+    buttonDOM.classList.add("media-card__button-open");
+
+    media.appendChild(buttonDOM);
     media.appendChild(mediaInfoDOM);
 
     return media;

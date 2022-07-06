@@ -134,6 +134,16 @@ a {
   border-radius: 12px;
   cursor: pointer;
 }
+.media-card__button-open {
+  border: 0;
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid transparent;
+}
+.media-card__button-open:focus {
+  border: 1px solid #d3573c;
+  border-radius: 5px;
+}
 .media-card__video-play {
   position: absolute;
   left: 5%;
@@ -207,9 +217,14 @@ a {
   color: #901c1c;
   border: none;
   transition: all 200ms;
+  border: 1px solid transparent;
 }
 .button-like:active {
   transform: scale(1.4);
+}
+.button-like:focus {
+  border: 1px solid #d3573c;
+  border-radius: 5px;
 }
 
 .button-close {
