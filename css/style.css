@@ -385,11 +385,24 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.contact-modal__container__close {
+  position: absolute;
+  right: 5%;
+  top: 4%;
+}
 .contact-modal__container__header h2 {
   font-size: 48px;
+  margin-top: 0;
+  max-width: 90%;
 }
 .contact-modal__container div {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .contact-modal__container {
+    width: 80%;
+    min-width: 200px;
+  }
 }
 
 .lightbox-modal {
