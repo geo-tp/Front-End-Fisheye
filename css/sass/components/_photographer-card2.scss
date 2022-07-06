@@ -8,12 +8,12 @@
     &__name {
       color: $secondary;
       font-weight: 400;
-      font-size: 50px;
+      font-size: 3em;
       text-decoration: none;
       margin-bottom: 10px;
     }
     &__location {
-      font-size: 24px;
+      font-size: 1.5em;
       margin-bottom: 15px;
 
       color: $secondary;
@@ -31,7 +31,7 @@
   @include tablet-design {
     &__infos {
       &__name {
-        font-size: 30px;
+        font-size: 2em;
       }
 
       &__description {

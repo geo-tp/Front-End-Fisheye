@@ -56,11 +56,12 @@ a {
   flex-direction: column;
   text-align: center;
   margin-bottom: 50px;
+  animation: appear-slowly 400ms linear;
 }
 .photographer-card1__name {
   color: #d3573c;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 2.5em;
   text-decoration: none;
   margin-bottom: 10px;
 }
@@ -95,12 +96,12 @@ a {
 .photographer-card2__infos__name {
   color: #d3573c;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 3em;
   text-decoration: none;
   margin-bottom: 10px;
 }
 .photographer-card2__infos__location {
-  font-size: 24px;
+  font-size: 1.5em;
   margin-bottom: 15px;
   color: #d3573c;
   font-weight: 400;
@@ -110,7 +111,7 @@ a {
 }
 @media screen and (max-width: 992px) {
   .photographer-card2__infos__name {
-    font-size: 30px;
+    font-size: 2em;
   }
   .photographer-card2__infos__description {
     padding-bottom: 10px;
@@ -138,16 +139,16 @@ a {
   left: 5%;
   top: 4%;
   color: #d3573c;
-  font-size: 20px;
+  font-size: 1.2em;
 }
 .media-card__infos {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.3em;
 }
 .media-card__infos button {
-  font-size: 20px;
+  font-size: 1em;
 }
 .media-card__infos a {
   padding-left: 7px;
@@ -162,10 +163,10 @@ a {
     flex-basis: 100%;
   }
   .media-card span {
-    font-size: 20px;
+    font-size: 1.2em;
   }
   .media-card span i {
-    font-size: 20px;
+    font-size: 1.2em;
   }
 }
 
@@ -179,7 +180,7 @@ a {
   border-radius: 3px;
   width: 200px;
   height: 80px;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: bold;
   outline: none;
   transition: color 0.1s ease;
@@ -218,7 +219,7 @@ a {
   cursor: pointer;
 }
 .button-close i {
-  font-size: 50px;
+  font-size: 3em;
 }
 
 .selection-default {
@@ -234,7 +235,7 @@ a {
   padding-right: 10px;
   border-radius: 3px;
   margin: 0 10px;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 600;
   cursor: pointer;
 }
@@ -249,7 +250,7 @@ a {
   background-color: #d3573c;
   cursor: pointer;
   color: black;
-  font-size: 18px;
+  font-size: 1.1em;
 }
 
 .contact-form__row {
@@ -257,7 +258,7 @@ a {
   flex-direction: column;
 }
 .contact-form__row label {
-  font-size: 26px;
+  font-size: 1.5em;
 }
 .contact-form__row input {
   height: 60px;
@@ -278,7 +279,7 @@ a {
   border: 2px solid black;
 }
 .contact-form__submit {
-  font-size: 18px;
+  font-size: 1em;
   width: 150px;
   height: 60px;
 }
@@ -325,7 +326,7 @@ a {
 }
 .lightbox__media__name {
   margin-top: 0;
-  font-size: 32px;
+  font-size: 2em;
 }
 .lightbox__close {
   position: absolute;
@@ -334,7 +335,7 @@ a {
   color: #901c1c;
 }
 .lightbox__close i {
-  font-size: 80px;
+  font-size: 4em;
 }
 @media screen and (max-width: 992px) {
   .lightbox {
@@ -350,7 +351,7 @@ a {
     position: absolute;
     top: 4%;
     padding: 0;
-    font-size: 40px;
+    font-size: 2.5em;
   }
   .lightbox__arrow-left {
     left: 10%;
@@ -365,7 +366,7 @@ a {
     color: #901c1c;
   }
   .lightbox__close i {
-    font-size: 40px;
+    font-size: 2.5em;
   }
 }
 
@@ -384,7 +385,7 @@ a {
   padding-top: 0;
   padding-bottom: 0;
   height: 60px;
-  font-size: 18px;
+  font-size: 1.1em;
 }
 .photographer-header div {
   flex-basis: 33%;
@@ -459,7 +460,7 @@ a {
   top: 3%;
 }
 .contact-modal__container__header h2 {
-  font-size: 48px;
+  font-size: 2.5em;
   margin-top: 0;
   max-width: 90%;
 }
@@ -472,7 +473,7 @@ a {
     min-width: 200px;
   }
   .contact-modal__container__header h2 {
-    font-size: 24px;
+    font-size: 1.7em;
   }
 }
 
@@ -522,7 +523,7 @@ a {
   position: relative;
 }
 .filters__container__button {
-  font-size: 16px;
+  font-size: 1em;
   width: 150px;
   height: 60px;
   justify-content: space-between;
@@ -540,7 +541,7 @@ a {
   background-color: #901c1c;
   padding: 0 10px;
   color: white;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 500;
   border-radius: 5px;
   z-index: 100;
@@ -550,7 +551,7 @@ a {
   font-weight: bold;
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 1em;
   height: 60px;
   padding-left: 15px;
   cursor: pointer;
@@ -577,7 +578,7 @@ a {
   z-index: 50;
   display: flex;
   padding: 15px 30px;
-  font-size: 24px;
+  font-size: 1.5em;
   color: black;
   font-weight: bold;
   border-radius: 4px;
