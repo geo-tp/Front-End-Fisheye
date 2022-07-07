@@ -19,9 +19,10 @@
     background-color: transparent;
     width: 100%;
     border: 2px solid transparent;
+    transition: all 400ms;
 
     &:focus {
-      border: 2px solid rgb(89, 89, 255);
+      border: 2px solid $focus-border;
       border-radius: 5px;
     }
   }
