@@ -48,7 +48,6 @@ function changeFilter(filterDOM) {
       break;
     case "Date":
       filterByDate();
-      console.log("in date");
       break;
     case "Titre":
       filterByTitle();

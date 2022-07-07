@@ -20,7 +20,6 @@ async function displayLightbox(data) {
   lightboxModal.style.display = "block";
 
   const closeButton = document.getElementById("close-lightbox-button");
-  console.log("CLOSE", closeButton);
   closeButton.focus();
 
   main.setAttribute("aria-hidden", true);

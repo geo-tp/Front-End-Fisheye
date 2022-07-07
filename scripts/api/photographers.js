@@ -30,7 +30,6 @@ async function getPhotographerById(id) {
       throw response;
     })
     .then((data) => {
-      console.log(data);
       for (let photographer of data.photographers) {
         if (photographer.id == id) {
           return photographer;
