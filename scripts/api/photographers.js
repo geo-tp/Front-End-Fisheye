@@ -1,5 +1,4 @@
-const photographerUrl =
-  "http://localhost:8000/Front-End-Fisheye/data/photographers.json";
+const photographerUrl = "./data/photographers.json";
 
 async function getPhotographers() {
   var photographers = await fetch(photographerUrl)
