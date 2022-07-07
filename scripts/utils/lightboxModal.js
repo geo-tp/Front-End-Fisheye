@@ -10,16 +10,19 @@ function closeLightbox() {
 }
 
 async function displayLightbox(data) {
-  currentLightboxMedia = data;
-  document.addEventListener("keydown", lightboxKeyboardEvent);
   const lightbox = document.querySelector(".lightbox");
   const lightboxModel = lightboxFactory(data);
   const lightboxDom = lightboxModel.getLightboxDOM();
+  const main = document.getElementById("main");
+  currentLightboxMedia = data;
+  document.addEventListener("keydown", lightboxKeyboardEvent);
   lightbox.parentNode.replaceChild(lightboxDom, lightbox);
   lightboxModal.style.display = "block";
-  lightboxDom.focus();
 
-  let main = document.getElementById("main");
+  const closeButton = document.getElementById("close-lightbox-button");
+  console.log("CLOSE", closeButton);
+  closeButton.focus();
+
   main.setAttribute("aria-hidden", true);
 
   // prevents lightbox and filters open at same time

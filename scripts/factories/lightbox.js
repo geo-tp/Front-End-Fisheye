@@ -6,6 +6,7 @@ function lightboxFactory(data) {
   function getLightboxDOM() {
     const content = `      
         <button
+        id="close-lightbox-button"
         class="button-close lightbox__close"
         src="assets/icons/close.svg"
         onclick="closeLightbox()"
