@@ -16,6 +16,7 @@ function photographerHeaderFactory(data) {
           <button 
               class="button-default photographer-header__contact" 
               onclick="displayContactModal()"
+              aria-haspopup="dialog"
               aria-label="ouvrir le formulaire pour contacter ${name}"
           >
             Contactez-moi
