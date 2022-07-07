@@ -1,3 +1,4 @@
+// Create a photographer's portfolio media card
 function mediaFactory(data) {
   const { id, photographerId, title, image, video, likes, date, price } = data;
 
@@ -16,9 +17,11 @@ function mediaFactory(data) {
     const media = document.createElement("article");
     media.classList.add("media-card");
 
+    //Media can be video or image type
     if (video) {
       mediaContentDOM = document.createElement("video");
       mediaContentDOM.src = mediaContent;
+      // button in top left to indicate media is video
       playButton = document.createElement("i");
       playButton.classList.add("fas", "fa-video", "media-card__video-play");
       media.appendChild(playButton);
@@ -38,6 +41,7 @@ function mediaFactory(data) {
       </button>
       `;
 
+    // Button used to wrap mediaContent
     let buttonDOM = document.createElement("button");
     buttonDOM.setAttribute(
       "aria-label",

@@ -7,6 +7,8 @@ const filtersList = document.getElementById("filters-list");
 filtersButton.addEventListener("click", displayOrCloseFilters);
 inactiveFilter1.addEventListener("click", () => changeFilter(inactiveFilter1));
 inactiveFilter2.addEventListener("click", () => changeFilter(inactiveFilter2));
+
+// filters navigation with keyboards
 inactiveFilter1.addEventListener("keydown", (e) =>
   mediaFiltersKeyboardEvent(e, inactiveFilter1)
 );
@@ -14,6 +16,7 @@ inactiveFilter2.addEventListener("keydown", (e) =>
   mediaFiltersKeyboardEvent(e, inactiveFilter2)
 );
 
+// display filter if it close or hide it if open
 function displayOrCloseFilters() {
   if (filtersList.style.display == "block") {
     filtersList.style.display = "none";
@@ -24,16 +27,19 @@ function displayOrCloseFilters() {
   }
 }
 
+// close filters
 function closeFilters() {
   filtersList.style.display = "none";
   filtersButton.setAttribute("aria-expanded", false);
 }
 
+// Update filter value and sort media list
 function changeFilter(filterDOM) {
   let textContent = activeFilter.textContent;
   activeFilter.textContent = filterDOM.textContent;
   filterDOM.textContent = textContent;
 
+  // we remove white space
   currentFilter = activeFilter.textContent.replace(/\s/g, "");
 
   switch (currentFilter) {
@@ -54,6 +60,7 @@ function changeFilter(filterDOM) {
   displayOrCloseFilters();
 }
 
+// Filtering media by likes desc
 function filterByPopularity() {
   photographerMedia = photographerMedia.sort((a, b) => {
     if (a.likes > b.likes) {
@@ -68,6 +75,7 @@ function filterByPopularity() {
   });
 }
 
+// Filtering media by date desc
 function filterByDate() {
   photographerMedia = photographerMedia.sort((a, b) => {
     if (a.date > b.date) {
@@ -82,6 +90,7 @@ function filterByDate() {
   });
 }
 
+// Filtering media by title asc
 function filterByTitle() {
   photographerMedia = photographerMedia.sort((a, b) => {
     if (a.title < b.title) {
@@ -96,6 +105,7 @@ function filterByTitle() {
   });
 }
 
+// Close and select filters with keyboards
 function mediaFiltersKeyboardEvent(e, filter) {
   if (e.key === "Escape" || e.key === "Esc") {
     displayOrCloseFilters();

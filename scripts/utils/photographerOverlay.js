@@ -1,3 +1,4 @@
+// Display photographer overlay with likes and pricing
 function displayPhotographerOverlay(photographer, media) {
   const photographerOverlayDOM = document.querySelector(
     ".photographer-overlay"

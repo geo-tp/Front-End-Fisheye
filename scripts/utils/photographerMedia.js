@@ -1,6 +1,10 @@
+// used to store media likes clicked by user
 let mediaAlreadyLiked = [];
+
+// current all photopgrapher media
 let photographerMedia = [];
 
+// display all photographer media
 async function displayPhotographerMedia(photographerMedia) {
   const photographerMediaDOM = document.querySelector(".photographer-media");
 
@@ -11,17 +15,20 @@ async function displayPhotographerMedia(photographerMedia) {
   }
 }
 
+// reset and hide all media
 function resetPhotographerMedia() {
   const photographerMediaDOM = document.querySelector(".photographer-media");
   photographerMediaDOM.innerHTML = "";
 }
 
+// format path to include photographerId
 function formatMediaPath(media) {
   return `./assets/portfolio/${media.photographerId}/${
     media.video ? media.video : media.image
   }`;
 }
 
+// Increment likes for a media
 function incrementMediaLikes(mediaId) {
   const likesDOM = document.getElementById(`media-${mediaId}`);
   const likeTotalCountDOM = document.getElementById("likes-total-count");

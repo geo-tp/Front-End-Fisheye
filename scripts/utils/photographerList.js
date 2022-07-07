@@ -1,3 +1,4 @@
+// display list of photographers
 async function displayPhotographers(photographers) {
   const photographersSection = document.querySelector(".photographers");
 

@@ -1,3 +1,4 @@
+// Create photographer overlay with likes and pricing
 function photographerOverlayFactory(data) {
   const { media, photographer } = data;
 

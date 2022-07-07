@@ -1,3 +1,4 @@
+// Create a LightBox DOM element
 function lightboxFactory(data) {
   const { id, title, image, video } = data;
   const mediaContent = formatMediaPath(data);

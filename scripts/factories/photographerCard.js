@@ -1,3 +1,4 @@
+// Create a photographer card
 function photographerFactory(data) {
   const { id, name, city, country, tagline, price, portrait } = data;
 

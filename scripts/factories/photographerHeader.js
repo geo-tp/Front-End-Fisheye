@@ -1,3 +1,4 @@
+// Create photographer header for photographer page
 function photographerHeaderFactory(data) {
   const { id, name, city, country, tagline, price, portrait } = data;
   const picture = `assets/photographers/${portrait}`;

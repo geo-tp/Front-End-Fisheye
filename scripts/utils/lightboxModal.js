@@ -1,6 +1,5 @@
 const lightboxModal = document.querySelector(".lightbox-modal");
 let currentLightboxMedia = null;
-// let photographerMedia = null;
 
 function closeLightbox() {
   document.removeEventListener("keydown", lightboxKeyboardEvent);
@@ -12,28 +11,31 @@ function closeLightbox() {
 
 async function displayLightbox(data) {
   currentLightboxMedia = data;
-  photographerMedia = await getMediaByPhotographerId(data.photographerId);
   document.addEventListener("keydown", lightboxKeyboardEvent);
   const lightbox = document.querySelector(".lightbox");
   const lightboxModel = lightboxFactory(data);
   const lightboxDom = lightboxModel.getLightboxDOM();
   lightbox.parentNode.replaceChild(lightboxDom, lightbox);
   lightboxModal.style.display = "block";
-  lightboxModal.focus();
+  lightboxDom.focus();
 
   let main = document.getElementById("main");
   main.setAttribute("aria-hidden", true);
 
+  // prevents lightbox and filters open at same time
   closeFilters();
 }
 
+// Update media in lightbox, different behaviour if type is video or img
 function updateMedia() {
   let lightboxMediaContentDOM = document.getElementById(
     "lightbox-media-content"
   );
   let lightboxMediaTitleDOM = document.getElementById("lightbox-media-title");
 
+  // Get formatted path with phographerId : (/img/portfolio/134/myImage.jpg)
   const mediaContent = formatMediaPath(currentLightboxMedia);
+
   const media = document.createElement(
     currentLightboxMedia.video ? "video" : "img"
   );
@@ -48,6 +50,7 @@ function updateMedia() {
   lightboxMediaTitleDOM.textContent = currentLightboxMedia.title;
 }
 
+// Display next media in lightbox
 function nextMedia() {
   for (let index = 0; index < photographerMedia.length; index++) {
     if (photographerMedia[index].id === currentLightboxMedia.id) {
@@ -64,6 +67,7 @@ function nextMedia() {
   }
 }
 
+// Display previous media in lightbox
 function previousMedia() {
   for (let index = 0; index <= photographerMedia.length; index++) {
     if (photographerMedia[index].id === currentLightboxMedia.id) {
@@ -80,6 +84,7 @@ function previousMedia() {
   }
 }
 
+// Media navigation with keyboards
 function lightboxKeyboardEvent(e) {
   if (e.key === "Escape" || e.key === "Esc") {
     closeLightbox();

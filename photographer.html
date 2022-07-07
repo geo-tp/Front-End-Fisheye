@@ -17,13 +17,23 @@
     ></script>
   </head>
   <body>
+    <!-- HEADER -->
     <header class="header">
       <a href="index.html" aria-label="Aller à la page d'accueil"
         ><img src="assets/images/logo.png" alt="Logo Fisheye" class="logo"
       /></a>
     </header>
+    <!-- END HEADER -->
+
+    <!-- MAIN -->
     <main id="main" class="main" aria-hidden="false">
-      <section class="photographer-header"></section>
+      <!-- PHOTOGRAPHER HEADER -->
+      <section class="photographer-header">
+        <!-- Photographer informations and contact button -->
+      </section>
+      <!-- END PHOTOGRAPHER HEADER -->
+
+      <!-- FILTERS -->
       <section class="filters">
         <h3 id="filters-title">Trier par</h3>
         <div class="filters__container">
@@ -55,9 +65,23 @@
           </ul>
         </div>
       </section>
-      <section class="photographer-media"></section>
-      <aside class="photographer-overlay"></aside>
+      <!-- END FILTERS -->
+
+      <!-- PHOTOGRAPHER MEDIA -->
+      <section class="photographer-media">
+        <!-- List of Photographer media -->
+      </section>
+      <!-- END PHOTOGRAPHER MEDIA -->
+
+      <!-- PHOTOGRAPHER OVERLAY -->
+      <aside class="photographer-overlay">
+        <!-- Overlay with photographer likes count and pricing -->
+      </aside>
+      <!-- END PHOTOGRAPHER OVERLAY -->
     </main>
+    <!-- END MAIN -->
+
+    <!-- CONTACT MODAL -->
     <aside
       id="contact_modal"
       class="contact-modal"
@@ -75,6 +99,7 @@
         <header class="contact-modal__container__header">
           <h2 id="contact-title">Contactez-moi</h2>
         </header>
+        <!-- FORM -->
         <form class="contact-form" role="contact" id="contact-form">
           <div class="contact-form__row">
             <label for="firstname">Prénom</label>
@@ -131,11 +156,19 @@
             Envoyer
           </button>
         </form>
+        <!-- END FORM -->
       </div>
     </aside>
+    <!-- END CONTACT MODAL -->
+
+    <!-- LIGHTBOX MODAL -->
     <aside class="lightbox-modal" role="dialog">
-      <div class="lightbox"></div>
+      <div class="lightbox">
+        <!-- Media full size with controls to navigate -->
+      </div>
     </aside>
+    <!-- END LIGHTBOX MODAL -->
+
     <script src="./scripts/utils/contactModal.js"></script>
     <script src="./scripts/utils/lightboxModal.js"></script>
     <script src="./scripts/utils/mediaFilters.js"></script>
