@@ -36,7 +36,7 @@ function mediaFactory(data) {
     mediaInfoDOM.innerHTML = `      
       <div class="media-card__infos__name">${title}</div>
       <button class="button-like" onclick='incrementMediaLikes(${id})' aria-label="ajouter un j'aime au média">
-        <span aria-label="nombre de j'aime du média" id=media-${id}>${likes}</span>
+        <span id=media-${id}>${likes}</span>
         <i class="fa fa-heart" aria-hidden="true"></i>
       </button>
       `;

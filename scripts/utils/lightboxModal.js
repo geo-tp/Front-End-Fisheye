@@ -4,6 +4,7 @@ let currentLightboxMedia = null;
 function closeLightbox() {
   document.removeEventListener("keydown", lightboxKeyboardEvent);
   lightboxModal.style.display = "none";
+  lightboxModal.setAttribute("role", "dialog");
 
   let main = document.getElementById("main");
   main.setAttribute("aria-hidden", false);
@@ -15,6 +16,8 @@ async function displayLightbox(data) {
   const lightboxDom = lightboxModel.getLightboxDOM();
   const main = document.getElementById("main");
   currentLightboxMedia = data;
+  lightboxModal.removeAttribute("role");
+
   document.addEventListener("keydown", lightboxKeyboardEvent);
   lightbox.parentNode.replaceChild(lightboxDom, lightbox);
   lightboxModal.style.display = "block";

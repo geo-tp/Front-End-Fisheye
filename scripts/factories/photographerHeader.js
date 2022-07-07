@@ -8,7 +8,7 @@ function photographerHeaderFactory(data) {
 
     const content = `
           <div class="photographer-card2">
-            <h2 class="photographer-card2__infos__name">${name}</h2>  
+            <h1 class="photographer-card2__infos__name">${name}</h1>  
             <div class="photographer-card2__infos__location">${city}, ${country}</div>
             <div class="photographer-card2__infos__description">${tagline}</div>      
           </div>

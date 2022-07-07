@@ -488,10 +488,11 @@ a {
   right: 5%;
   top: 3%;
 }
-.contact-modal__container__header h2 {
+.contact-modal__container__header h1 {
   font-size: 2.5em;
   margin-top: 0;
   max-width: 90%;
+  color: black;
 }
 .contact-modal__container div {
   margin-bottom: 20px;
@@ -547,6 +548,9 @@ a {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+}
+.filters h2 {
+  font-size: 1em;
 }
 .filters__container {
   position: relative;

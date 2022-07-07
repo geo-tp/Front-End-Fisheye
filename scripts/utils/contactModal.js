@@ -4,6 +4,7 @@ function displayContactModal() {
 
   let main = document.getElementById("main");
   main.setAttribute("aria-hidden", true);
+  modal.removeAttribute("role");
   // keys controls for accessibility
   document.addEventListener("keydown", contactKeyboardEvent);
 
@@ -19,6 +20,7 @@ function displayContactModal() {
 function closeContactModal() {
   const modal = document.getElementById("contact_modal");
   modal.style.display = "none";
+  modal.setAttribute("role", "dialog");
   let main = document.getElementById("main");
   main.setAttribute("aria-hidden", false);
   document.removeEventListener("keydown", contactKeyboardEvent);

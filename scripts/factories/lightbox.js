@@ -8,7 +8,6 @@ function lightboxFactory(data) {
         <button
         id="close-lightbox-button"
         class="button-close lightbox__close"
-        src="assets/icons/close.svg"
         onclick="closeLightbox()"
         aria-label="fermer l'image"
         >
@@ -26,7 +25,7 @@ function lightboxFactory(data) {
             : `<video controls id="lightbox-media-content" src="${mediaContent}" />`
         }
         
-        <p id="lightbox-media-title" class="lightbox__media__name">${title}</p>
+        <h1 id="lightbox-media-title" class="lightbox__media__name">${title}</h1>
         </div>
         <a class="lightbox__arrow-right" onclick="nextMedia()" aria-label="média suivant"
         ><i class="fa fa-angle-right" aria-hidden="true"></i
