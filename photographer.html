@@ -90,6 +90,7 @@
     >
       <div class="contact-modal__container">
         <button
+          id="contact-close-button"
           class="contact-modal__container__close button-close"
           onclick="closeContactModal()"
           aria-label="fermer la fenêtre de contact"
@@ -162,7 +163,11 @@
     <!-- END CONTACT MODAL -->
 
     <!-- LIGHTBOX MODAL -->
-    <aside class="lightbox-modal" role="dialog">
+    <aside
+      class="lightbox-modal"
+      role="dialog"
+      aria-label="Ouverture d'un média en plein écran"
+    >
       <div class="lightbox">
         <!-- Media full size with controls to navigate -->
       </div>

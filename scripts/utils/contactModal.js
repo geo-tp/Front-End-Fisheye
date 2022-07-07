@@ -7,10 +7,10 @@ function displayContactModal() {
   // keys controls for accessibility
   document.addEventListener("keydown", contactKeyboardEvent);
 
-  const firstname = document.getElementById("firstname");
+  const close = document.getElementById("contact-close-button");
 
-  // focus on first field to improve accessibility
-  firstname.focus();
+  // focus on close button
+  close.focus();
 
   // prevent contact modal and filters open at same time
   closeFilters();
