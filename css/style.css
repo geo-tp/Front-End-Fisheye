@@ -45,6 +45,7 @@ a {
   width: 200px;
   border-radius: 100%;
   object-fit: cover;
+  box-shadow: 0px 10px 30px 0px #868686;
 }
 
 .photographer-card1 {
@@ -134,6 +135,7 @@ a {
   object-position: top;
   border-radius: 12px;
   cursor: pointer;
+  box-shadow: 0px 10px 50px 0px #828282;
 }
 .media-card__button-open {
   border: 0;
@@ -405,6 +407,9 @@ a {
   padding-left: 40px;
   padding-right: 40px;
   flex-wrap: wrap;
+  box-shadow: 0px 10px 80px 0px #c5c5c5;
+  background-color: #F3F3F3;
+  border-radius: 20px;
 }
 .photographer-header__contact {
   padding-top: 0;
@@ -544,10 +549,9 @@ a {
 }
 
 .filters {
-  margin: 20px 100px;
+  margin: 40px 100px;
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
 }
 .filters h2 {
   font-size: 1em;
@@ -619,6 +623,7 @@ a {
   color: black;
   font-weight: bold;
   border-radius: 4px;
+  box-shadow: 0px 0px 50px 0px #868686;
 }
 .photographer-overlay__like {
   min-width: 100px;
