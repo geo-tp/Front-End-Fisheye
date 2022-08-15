@@ -3,12 +3,6 @@ class LightBoxTemplate {
         this._media = media
     }
 
-    formatMediaPath() {
-        return `./assets/portfolio/${this._media.photographerId}/${
-          this._media.video ? this._media.video : this._media.image
-        }`;
-      }
-
     createLightBox() {
         const content = `      
         <button
@@ -27,8 +21,8 @@ class LightBoxTemplate {
         <div class="lightbox__media">
         ${
             this._media.image
-            ? `<img id="lightbox-media-content" src="${this.formatMediaPath()}" alt="${this._media.title}" />`
-            : `<video controls id="lightbox-media-content" src="${this.formatMediaPath()}" />`
+            ? `<img id="lightbox-media-content" src="${formatMediaPath(this._media)}" alt="${this._media.title}" />`
+            : `<video controls id="lightbox-media-content" src="${formatMediaPath(this._media)}" />`
         }
         
         <h1 id="lightbox-media-title" class="lightbox__media__name">${this._media.title}</h1>

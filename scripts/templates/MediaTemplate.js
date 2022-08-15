@@ -17,14 +17,14 @@ class MediaTemplate {
         //Media can be video or image type
         if (this._media.video) {
           mediaContentDOM = document.createElement("video");
-          mediaContentDOM.src = this.formatMediaPath();
+          mediaContentDOM.src = formatMediaPath(this._media);
           // button in top left to indicate media is video
           let playButton = document.createElement("i");
           playButton.classList.add("fas", "fa-video", "media-card__video-play");
           media.appendChild(playButton);
         } else {
           mediaContentDOM = document.createElement("img");
-          mediaContentDOM.src = this.formatMediaPath();
+          mediaContentDOM.src = formatMediaPath(this._media);
           mediaContentDOM.alt = this._media.title;
         }
     

@@ -12,8 +12,8 @@ function closeLightbox() {
 
 async function displayLightbox(data) {
   const lightbox = document.querySelector(".lightbox");
-  const lightboxModel = new LightBoxFactory(data);
-  const lightboxDom = new LightBoxTemplate(lightboxModel)
+  const mediaModel = new MediaFactory(data);
+  const lightboxDom = new LightBoxTemplate(mediaModel)
   const main = document.getElementById("main");
   currentLightboxMedia = data;
   lightboxModal.removeAttribute("role");

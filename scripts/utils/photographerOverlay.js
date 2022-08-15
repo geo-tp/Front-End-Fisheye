@@ -3,13 +3,14 @@ function displayPhotographerOverlay(photographer, media) {
   const photographerOverlayDOM = document.querySelector(
     ".photographer-overlay"
   );
-  const photographerMediaModel = photographerOverlayFactory({
-    photographer,
+
+  const photographerModel  = new PhotographersFactory(photographer)
+  const photographerOverlay = new PhotographerOverlayTemplate(
     media,
-  });
-  const overlayDOM = photographerMediaModel.getUserOverlayDOM();
+    photographerModel,
+  );
   photographerOverlayDOM.parentNode.replaceChild(
-    overlayDOM,
-    photographerOverlayDOM
+    photographerOverlay.createPhotographerOverlay(),
+    photographerOverlayDOM,
   );
 }
