@@ -1,4 +1,5 @@
-const mediaUrl = "./data/photographers.json";
+// const mediaUrl = "./data/photographers.json";
+const mediaUrl = "http://localhost:8000/Front-End-Fisheye/data/photographers.json";
 
 async function getMediaByPhotographerId(id) {
   var media = await fetch(mediaUrl)

@@ -12,14 +12,14 @@ function closeLightbox() {
 
 async function displayLightbox(data) {
   const lightbox = document.querySelector(".lightbox");
-  const lightboxModel = lightboxFactory(data);
-  const lightboxDom = lightboxModel.getLightboxDOM();
+  const lightboxModel = new LightBoxFactory(data);
+  const lightboxDom = new LightBoxTemplate(lightboxModel)
   const main = document.getElementById("main");
   currentLightboxMedia = data;
   lightboxModal.removeAttribute("role");
 
   document.addEventListener("keydown", lightboxKeyboardEvent);
-  lightbox.parentNode.replaceChild(lightboxDom, lightbox);
+  lightbox.parentNode.replaceChild(lightboxDom.createLightBox(), lightbox);
   lightboxModal.style.display = "block";
 
   const closeButton = document.getElementById("close-lightbox-button");
