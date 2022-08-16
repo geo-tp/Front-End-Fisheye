@@ -12,7 +12,7 @@ function closeLightbox() {
 
 async function displayLightbox(data) {
   const lightbox = document.querySelector(".lightbox");
-  const mediaModel = new MediaFactory(data);
+  const mediaModel = new ElementsFactory(data, "MEDIA");
   const lightboxDom = new LightBoxTemplate(mediaModel)
   const main = document.getElementById("main");
   currentLightboxMedia = data;

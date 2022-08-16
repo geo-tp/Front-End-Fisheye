@@ -4,7 +4,7 @@ function displayPhotographerOverlay(photographer, media) {
     ".photographer-overlay"
   );
 
-  const photographerModel  = new PhotographersFactory(photographer)
+  const photographerModel  = new ElementsFactory(photographer, "PHOTOGRAPHER")
   const photographerOverlay = new PhotographerOverlayTemplate(
     media,
     photographerModel,

@@ -9,7 +9,7 @@ async function displayPhotographerMedia(photographerMedia) {
   const photographerMediaDOM = document.querySelector(".photographer-media");
 
   for (let media of photographerMedia) {
-    const mediaModel = new MediaFactory(media);
+    const mediaModel = new ElementsFactory(media, "MEDIA");
     const mediaCardDOM = new MediaTemplate(mediaModel);
     photographerMediaDOM.appendChild(mediaCardDOM.createMediaCard());
   }

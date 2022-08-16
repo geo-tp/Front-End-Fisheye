@@ -5,7 +5,7 @@ async function init() {
   const photographersSection = document.querySelector(".photographers");
 
   photographers.forEach((photographer) => {
-    const photographerModel = new PhotographersFactory(photographer);
+    const photographerModel = new ElementsFactory(photographer, "PHOTOGRAPHER");
     const photographerDOM = new PhotographerTemplate(photographerModel)
     photographersSection.appendChild(photographerDOM.createPhotographerCard());
   });
