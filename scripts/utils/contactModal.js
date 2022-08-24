@@ -1,3 +1,6 @@
+
+const nameRegexp = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
+
 function displayContactModal() {
   const modal = document.getElementById("contact_modal");
   modal.style.display = "block";
@@ -24,6 +27,34 @@ function closeContactModal() {
   let main = document.getElementById("main");
   main.setAttribute("aria-hidden", false);
   document.removeEventListener("keydown", contactKeyboardEvent);
+}
+
+function handleFormClick(e) {
+  e.preventDefault()
+
+  const firstname = e.target[0].value
+  const lastname = e.target[1].value
+  const email = e.target[2].value
+  const message = e.target[3].value
+
+  if (!firstname.match(nameRegexp)) {
+    console.log("Le prénom ne respecte pas le format")
+  }
+
+  else if (!lastname.match(nameRegexp)) {
+    console.log("Le nom ne respecte pas le format")
+
+  }
+
+  else {
+    console.log(`
+      Prénom : ${firstname},
+      Nom : ${lastname},
+      Email : ${email}
+      Message : ${message}
+    `)
+  }
+
 }
 
 function contactKeyboardEvent(e) {

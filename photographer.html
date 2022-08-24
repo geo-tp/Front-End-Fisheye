@@ -101,7 +101,8 @@
           <h1 id="contact-title">Contactez-moi</h1>
         </header>
         <!-- FORM -->
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" onsubmit="return handleFormClick(event);"
+        >
           <div class="contact-form__row">
             <label for="firstname">Prénom</label>
             <input
